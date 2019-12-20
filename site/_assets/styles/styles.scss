@@ -1,5 +1,10 @@
 @import 'utilities';
 
 // Overrides
-$body-bg: #fafcfd;
-$body-color: #333;
+$body-bg: #222429;
+$body-color: #e1e1e1;
+
+body {
+  background-color: $body-bg;
+  color: $body-color;
+}
