@@ -1,0 +1,25 @@
+@import './../../_assets/styles/utilities';
+
+.article {
+  color: #333;
+  // h1 {
+  //   margin-bottom: 0.75em;
+  // }
+  // h2 {
+  //   margin-bottom: 0.5em;
+  // }
+  p {
+    margin: calc(1em + 0.5vw) 0;
+    line-height: calc(1.5em + 0.2vw);
+    word-break: break-word;
+  }
+  // time {
+  //   color: lighten($body-color, 50%);
+  //   font-size: 1rem;
+  // }
+  // &__hero {
+  //   font-size: 0;
+  //   margin-left: calc((100vw - 730px) / -2);
+  //   width: 100vw;
+  // }
+}

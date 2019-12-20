@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+
+<style>
+  {{"site/_includes/layouts/post.scss" | sass | safe}}
+</style>
+<article class="article container mx-auto max-w-xl">
+  <header class="mb-4">
+    <time datetime="{{date}}">{{date | date}}</time>
+    <h1 class="font-bold text-4xl mb-2 antialiased">{{title}}</h1>
+    {% if thumbnail %}
+      <img class="article__hero" async src="{{thumbnail | url}}">
+    {% endif %}
+  </header>
+  <section class="leading-relaxed">
+    {{ content | safe }}
+  </section>
+</article>

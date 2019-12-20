@@ -1,0 +1,13 @@
+@import './../../../_assets/styles/utilities';
+
+.header {
+  li {
+    margin: 0 10px;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
