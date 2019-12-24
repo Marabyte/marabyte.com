@@ -1,8 +1,14 @@
 <style>
   {{"site/_includes/components/footer/footer.scss" | sass | safe}}
 </style>
-<footer class="footer container mx-auto mt-auto p-4">
-  <small>
+<footer class="footer container mx-auto mt-auto p-4 flex items-center">
+  <small class="mr-auto">
     Marabyte 2020
   </small>
+    <a class="ml-4" href="https://github.com/Marabyte">
+  		{% include "icons/github.njk" %}
+    </a>
+    <a class="ml-4" href="https://twitter.com/marabyte_">
+  		{% include "icons/twitter.njk" %}
+    </a>
 </footer>

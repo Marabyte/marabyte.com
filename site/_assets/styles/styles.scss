@@ -2,9 +2,30 @@
 
 // Overrides
 $body-bg: #222429;
-$body-color: #e1e1e1;
+$body-colour: #e1e1e1;
+$links-colour: #41c7c7;
 
 body {
   background-color: $body-bg;
-  color: $body-color;
+  color: $body-colour;
+  font-family: Fira;
+}
+
+a,
+a:active,
+a:focus,
+a:link,
+a:visited {
+  color: $links-colour;
+}
+
+article {
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    margin: calc(1em + 0.5vw) 0;
+    line-height: calc(1.5em + 0.2vw);
+    word-break: break-word;
+  }
 }

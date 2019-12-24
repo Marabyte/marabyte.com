@@ -1,0 +1,10 @@
+@import '../../_assets/styles/utilities';
+
+.home {
+  svg {
+    margin-bottom: 1em;
+    @include mobile {
+      max-width: 70%;
+    }
+  }
+}
