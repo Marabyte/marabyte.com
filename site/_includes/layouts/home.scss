@@ -2,9 +2,19 @@
 
 .home {
   svg {
-    margin-bottom: 1em;
     @include mobile {
+      margin-bottom: 1em;
       max-width: 70%;
+    }
+    @include tablet-portrait {
+      margin-right: 3em;
+      max-width: 20%;
+    }
+    width: 100%;
+  }
+  article {
+    @include tablet-portrait {
+      max-width: 50%;
     }
   }
 }
