@@ -1,7 +1,7 @@
 {
-  "name": "ice-pail-experiment",
+  "name": "marabyte",
   "version": "1.0.0",
-  "description": "Generates static websites using Netlify CMS and 11ty",
+  "description": "Home of the Marabyte",
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy --input=site",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/greyskullrocks/ice-pail-experiment.git"
+    "url": "git+https://github.com/Marabyte/marabyte.com.git"
   },
   "keywords": [
     "JAM",
@@ -21,9 +21,9 @@
   "author": "Hugo Nogueira",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/greyskullrocks/ice-pail-experiment/issues"
+    "url": "https://github.com/Marabyte/marabyte.com/issues"
   },
-  "homepage": "https://github.com/greyskullrocks/ice-pail-experiment#readme",
+  "homepage": "https://github.com/Marabyte/marabyte.com#readme",
   "dependencies": {
     "netlify-cms": "^2.9.7"
   },
