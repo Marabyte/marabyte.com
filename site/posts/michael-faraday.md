@@ -18,6 +18,11 @@ summary: >-
   electrolysis. His inventions of electromagnetic rotary devices formed the
   foundation of electric motor technology, and it was largely due to his efforts
   that electricity became practical for use in technology.
+description: >-
+  Michael Faraday was an English scientist who contributed to the study of
+  electromagnetism and electrochemistry. His main discoveries include the
+  principles underlying electromagnetic induction, diamagnetism and
+  electrolysis.
 tags:
   - post
 ---
