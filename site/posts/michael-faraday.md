@@ -1,7 +1,7 @@
 ---
 title: Michael Faraday
 date: 2019-11-04T16:54:06.154Z
-thumbnail: /uploads/nasa-89127-unsplash-1-.jpg
+thumbnail: https://www.marabyte.com/uploads/nasa-89127-unsplash-1-.jpg
 summary: >-
   Michael Faraday was an English scientist who contributed to the study of
   electromagnetism and electrochemistry. His main discoveries include the

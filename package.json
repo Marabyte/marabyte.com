@@ -43,6 +43,7 @@
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.19.1",
+    "html-minifier": "^4.0.0",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^5.2.4",
     "postcss": "^7.0.25",
