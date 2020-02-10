@@ -1,4 +1,14 @@
-@import './../../_assets/styles/utilities';
+@import "./../../_assets/styles/utilities";
 
 .article {
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-left: 1em;
+    margin-top: 2.5em;
+  }
+
+  p {
+    margin-top: calc(1em + 0.5vw);
+  }
 }
