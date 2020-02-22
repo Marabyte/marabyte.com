@@ -1,5 +1,5 @@
-@import 'utilities';
-@import './fonts';
+@import "utilities";
+@import "./fonts";
 
 // Overrides
 $body-bg: #222429;
@@ -9,6 +9,13 @@ $links-colour: #41c7c7;
 body {
   background-color: $body-bg;
   color: $body-colour;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
   font-family: Fira;
 }
 
