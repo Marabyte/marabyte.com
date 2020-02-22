@@ -12,7 +12,7 @@ templateClass: tmpl-post
     <h1 class="font-bold text-2xl text-4xl mb-2 antialiased">{{title}}</h1>
     {% if featured_image %}
       <figure>
-        <img class="article__hero" loading="lazy" heigth="356" width="576" src="{{featured_image.src | url}}">
+        <img {% if featured_image.alt %} alt="{{featured_image.alt}}" {% endif %} class="article__hero" loading="lazy" heigth="356" width="576" src="{{featured_image.src | url}}">
         {% if featured_image.caption %}
           <figcaption class="text-xs pt-2">{{featured_image.caption | safe}}</figcaption>
         {% endif %}
