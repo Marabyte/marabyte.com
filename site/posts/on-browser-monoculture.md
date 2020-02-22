@@ -1,7 +1,10 @@
 ---
 title: On browser monoculture
 date: 2019-01-12T16:54:06.154Z
-thumbnail: 'https://www.marabyte.com/uploads/nasa-89127-unsplash-1-.jpg'
+featured_image:
+  alt: I am alt
+  src: /uploads/geometrized_svg (8).svg
+  title: I am text
 summary: >-
   Michael Faraday was an English scientist who contributed to the study of
   electromagnetism and electrochemistry. His main discoveries include the
