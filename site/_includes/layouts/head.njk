@@ -18,7 +18,7 @@
   <meta property="og:description" content="{{ summary or metadata.description }}" />
   <meta property="og:url" content="{{ metadata.url + page.url or metadata.url + '/' }}" />
   <meta property="og:site_name" content="Home of the Marabyte" />
-  <meta property="og:image" content="{{ featured_image.src + '.png' or metadata.image }}" />
+  <meta property="og:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}" />
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
   <meta property="og:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
@@ -29,7 +29,7 @@
   <meta property="twitter:url" content="{{metadata.url + page.url or metadata.url + '/' }}">
   <meta property="twitter:title" content="{{ title or metadata.title }}">
   <meta property="twitter:description" content="{{ summary or metadata.description }}">
-  <meta property="twitter:image" content="{{ featured_image.src + '.png' or metadata.image }}">
+  <meta property="twitter:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}">
   <meta property="twitter:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
   <link rel="preload" href="/assets/fonts/firaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <style>
