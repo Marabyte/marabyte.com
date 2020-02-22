@@ -2,9 +2,9 @@
 title: On browser monoculture
 date: 2019-01-12T16:54:06.154Z
 featured_image:
-  alt: I am alt
-  src: /uploads/geometrized_svg (8).svg
-  title: I am text
+  alt: An vector geometric representation of a galaxy
+  src: /uploads/the_deep_sky.svg
+  caption: Original photo by Michael Olsen on Unsplash
 summary: >-
   Michael Faraday was an English scientist who contributed to the study of
   electromagnetism and electrochemistry. His main discoveries include the
