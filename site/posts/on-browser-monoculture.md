@@ -3,21 +3,15 @@ title: On browser monoculture
 date: 2019-01-12T16:54:06.154Z
 thumbnail: https://www.marabyte.com/uploads/nasa-89127-unsplash-1-.jpg
 summary: >-
-  Michael Faraday was an English scientist who contributed to the study of
-  electromagnetism and electrochemistry. His main discoveries include the
-  principles underlying electromagnetic induction, diamagnetism and
-  electrolysis.
+  Microsoft announced the new Edge browser will use Chromium. Are these good news or are one step closer to Google's complete web dominance?
 
 description: >-
-  Michael Faraday was an English scientist who contributed to the study of
-  electromagnetism and electrochemistry. His main discoveries include the
-  principles underlying electromagnetic induction, diamagnetism and
-  electrolysis.
+  Microsoft announced the new Edge browser will use Chromium. Are these good news or are one step closer to Google's complete web dominance?
 tags:
   - post
 ---
 
-The end of 2018 came with one of the most surprising news on the web’s pocket universe: Microsoft will cease to develop EdgeHTML and Chakra and will use [Chromium for Edge’s internals instead](https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md).
+The end of 2018 came with one of the most surprising news on the web’s pocket universe: Microsoft will cease to develop EdgeHTML / Chakra and will use [Chromium for Edge’s internals instead](https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md).
 In hindsight, maybe there [were a few hints](https://9to5google.com/2018/11/19/microsoft-google-chrome-windows-10-arm/) that Microsoft was heading in this direction, but it was very surprising nevertheless.
 What was unsurprising, however, were the reactions to this move: for the majority of people, the _gasp_ was followed by a “finally!” and I was one of them.
 
@@ -46,8 +40,10 @@ It is important to keep in mind that IE6 monoculture was very different than Web
 You see, the thing is… well… it’s complicated. Like all things, there are pros and cons.
 WebKit’s open source nature allowed browsers to evolve quickly and to support new platforms like televisions, gaming consoles and whatnot without having vendors building an engine from scratch. But the open source nature on its own it isn’t a magic bullet, as the number of browsers grew so did the fragmentation.
 Some argue that monoculture is more developer friendly but I think that’s not true. It may have been back in IE6 days but not anymore.
-I honestly don’t know what is worse, having to deal with a rendering issue with Firefox and Edge or with Android Stock and Samsung Internet. As a developer, I would expect all WebKit browsers to behave the same but the cruel reality is that they are not all running the same WebKit. Some are using last week’s code, others are using last years. But I agree with you, this is not a monoculture issue, this is an issue of browser vendors taking too long to release updates or making forks of the code and running somehow similar codebases but they’re not quite the same.
+I honestly don’t know what is worse, having to deal with a rendering issue with Firefox and Edge or with Android Stock and Samsung Internet.
+As a developer, I would expect all WebKit browsers to behave the same but the cruel reality is that they are not all running the same WebKit. Some are using last week’s code, others are using last years. But I agree with you, this is not a monoculture issue, this is an issue of browser vendors taking too long to release updates or making forks of the code and running somehow similar codebases but they’re not quite the same.
 With the move to Chromium, Microsoft will have access to feature parity with Chrome and we all can agree that this is good. Very good even.
+
 But there’s no guarantee that Microsoft will always use the latest and greatest.
 Will Microsoft sync its release cycle with Google? I doubt it. Am I being a bit of pessimist? Maybe. But if we take a look at Opera we may have a glimpse of what’s in store for Edge.
 At the time of writing the latest release of Opera was version 57.0.3098.110, released on 2019/01/03, that included Chromium 70.0.3538.102, released on 2018/11/08, while Chrome was on version 71.0.3578.98, released on 2018/12/12.
