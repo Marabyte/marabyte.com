@@ -6,20 +6,20 @@ templateClass: tmpl-post
 <style>
   {{"site/_includes/layouts/post.scss" | sass | safe}}
 </style>
-<article class="article px-4 md:px-0 container mx-auto max-w-xl">
+<article class="article px-4 md:px-0 container mx-auto ">
   <header class="mb-4">
-    <time datetime="{{date}}">{{date | date}}</time>
-    <h1 class="font-bold text-2xl text-4xl mb-2 antialiased">{{title}}</h1>
+    <time class="block mx-auto max-w-xl" datetime="{{date}}">{{date | date}}</time>
+    <h1 class="font-bold text-2xl text-4xl mb-2 antialiased mx-auto max-w-xl">{{title}}</h1>
     {% if featured_image %}
       <figure>
-        <img {% if featured_image.alt %} alt="{{featured_image.alt}}" {% endif %} class="article__hero" loading="lazy" heigth="356" width="576" src="{{featured_image.src | url}}">
+        <img class="object-cover h-64 w-full" {% if featured_image.alt %} alt="{{featured_image.alt}}" {% endif %} class="article__hero" loading="lazy" heigth="356" width="576" src="{{featured_image.src | url}}">
         {% if featured_image.caption %}
-          <figcaption class="text-xs pt-2">{{featured_image.caption | safe}}</figcaption>
+          <figcaption class="mx-auto max-w-xl text-xs pt-2">{{featured_image.caption | safe}}</figcaption>
         {% endif %}
       </figure>
     {% endif %}
   </header>
-  <section class="leading-relaxed">
+  <section class="leading-relaxed mx-auto max-w-xl">
     {{ content | safe }}
   </section>
 </article>
