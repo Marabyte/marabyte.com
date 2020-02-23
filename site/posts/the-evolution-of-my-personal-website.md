@@ -9,4 +9,4 @@ summary: A reflection on the tech evolution of my personal website.
 tags:
   - post
 ---
-Over the years my personal website changed a lot.
+Over the years my personal website changed a lot, both the content and the technical side.
