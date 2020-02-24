@@ -7,7 +7,7 @@ featured_image:
   src: /uploads/the_deep_sky.svg
 summary: >-
   Microsoft will cease to develop EdgeHTML / Chakra and will use Chromium for
-  Edge’s internals instead. Are this good news or are we close to a full Google
+  Edge’s internals instead. Are this good news or are we close to full Google
   dominance of the internet?
 tags:
   - post
