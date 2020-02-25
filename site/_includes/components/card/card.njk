@@ -2,16 +2,14 @@
   {{"site/_includes/components/card/card.scss" | sass | safe}}
 </style>
 
-<article class="postcard mb-8">
-    <header class="mb-4">
+<article class="postcard rounded overflow-hidden shadow-lg">
+    <img class="w-full" load="lazy" height="276" width="576" src="{{post.data.featured_image.src | url}}">
+    <header class="px-6 py-4">
         <small class="block">Posted on <time datetime="{{post.data.date}}">{{post.data.date | date}}</time></small>
-        <h5 class="font-bold text-3xl mb-2 antialiased">{{post.data.title}}</h5>
-        {% if post.data.thumbnail %}
-        <img class="w-full" async height="276" width="576" src="{{post.data.thumbnail | url}}">
-        {% endif %}
+        <h5 class="font-bold text-2xl mb-2 antialiased">{{post.data.title}}</h5>
+        <p class="leading-relaxed text-base mb-4">{{post.data.summary}}</p>
     </header>
-    <p class="leading-relaxed mb-4">{{post.data.summary}}</p>
-    <footer>
+    <footer class="px-6 pb-4">
         <a href="{{post.url}}">Read more</a>
     </footer>
 </article>

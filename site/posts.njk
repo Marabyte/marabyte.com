@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 content: true
 ---
-<section class="container mx-auto max-w-xl">
+<section class="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 {%- for post in collections.post -%}
   {% include "components/card/card.njk" %}
 {%- endfor -%}
