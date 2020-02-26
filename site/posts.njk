@@ -2,8 +2,13 @@
 layout: layouts/base.njk
 content: true
 ---
-<section class="container mx-auto max-w-xl">
-{%- for post in collections.post -%}
+<style>
+  {{"site/_includes/components/card/card.scss" | sass | safe}}
+</style>
+
+<section class="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+{%- for post in collections.post | reverse -%}
+{% set index = loop.index %}
   {% include "components/card/card.njk" %}
 {%- endfor -%}
 </section>
