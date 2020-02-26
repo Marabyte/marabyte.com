@@ -4,7 +4,7 @@ date: 2019-01-12T16:54:06.154Z
 featured_image:
   alt: A vector geometric representation of a galaxy
   caption: Original photo by Michael Olsen on Unsplash
-  src: /uploads/the_deep_sky.svg
+  src: /uploads/marita_kavelashvili.svg
 summary: >-
   Microsoft will cease to develop EdgeHTML / Chakra and will use Chromium for
   Edge’s internals instead. Are these good news or are we close to full Google
