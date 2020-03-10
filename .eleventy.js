@@ -1,6 +1,7 @@
 const sassBuild = require("./lib/sass.11ty");
 const tailwindBuild = require("./lib/tailwind.11ty");
 const htmlmin = require("./lib/html-minify.11ty");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
   // Input directory: src
@@ -18,4 +19,6 @@ module.exports = function(eleventyConfig) {
 
   // Transforms
   eleventyConfig.addTransform("htmlmin", htmlmin);
+
+  eleventyConfig.addPlugin(pluginRss);
 };
