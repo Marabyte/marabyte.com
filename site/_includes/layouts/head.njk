@@ -38,4 +38,35 @@
   <style>
     {{"site/_assets/styles/global.css" | tailwind | safe}}
   </style>
+  {% if templateClass === 'tmpl-post' %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsArticle",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://google.com/article"
+      },
+      "headline": "{{title}}",
+      "image": [
+        "{{metadata.url + featured_image.src + '.png'}}"
+       ],
+      "datePublished": "{{date.toISOString()}}",
+      {# "dateModified": "{{page.lastMod.toISOString()}}", #}
+      "author": {
+        "@type": "Person",
+        "name": "Hugo Nogueira"
+      },
+       "publisher": {
+        "@type": "Organization",
+        "name": "Marabyte",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{metadata.image}}"
+        }
+      },
+      "description": "{{summary}}"
+    }
+    </script>
+  {% endif %}
 </head>

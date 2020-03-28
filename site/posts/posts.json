@@ -2,6 +2,7 @@
   "layout": "layouts/post.njk",
   "permalink": "post/{{ title | slug }}/index.html",
   "tags": "post",
+  "lastMod": "Last Modified",
   "reverse": true,
   "changeFreq": "monthly",
   "priority": "0.5"
