@@ -3,5 +3,6 @@
   "permalink": "post/{{ title | slug }}/index.html",
   "tags": "post",
   "reverse": true,
-  "changeFreq": "0.5"
+  "changeFreq": "monthly",
+  "priority": "0.5"
 }
