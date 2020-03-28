@@ -2,5 +2,6 @@
   "layout": "layouts/post.njk",
   "permalink": "post/{{ title | slug }}/index.html",
   "tags": "post",
-  "reverse": true
+  "reverse": true,
+  "changeFreq": "0.5"
 }

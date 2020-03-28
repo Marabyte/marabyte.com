@@ -8,7 +8,7 @@ module.exports = function(eleventyConfig) {
   // Output directory: _site
 
   // Add filters to Nunjucks
-  eleventyConfig.addFilter("date", require("./site/_filters/date.11ty"));
+  eleventyConfig.addFilter("date", require("./lib/date.11ty"));
   eleventyConfig.addFilter("sass", sassBuild);
   eleventyConfig.addNunjucksAsyncFilter("tailwind", tailwindBuild);
 
