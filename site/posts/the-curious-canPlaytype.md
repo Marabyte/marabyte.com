@@ -1,6 +1,7 @@
 ---
 title: The curious CanPlayType()
 date: 2020-02-24T16:07:10.122Z
+code: true
 featured_image:
   alt: >-
     A vector geometric representation of a silhouette photo of mountain during
