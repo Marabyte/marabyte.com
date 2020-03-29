@@ -4,7 +4,7 @@ date: 2019-01-12T16:54:06.154Z
 featured_image:
   alt: A vector geometric representation of a galaxy
   caption: Original photo by Michael Olsen on Unsplash
-  src: /uploads/the_deep_sky.svg
+  src: /uploads/the_deep_sky_wide.svg
 summary: >-
   Microsoft will cease to develop EdgeHTML / Chakra and will use Chromium for
   Edge’s internals instead. Are these good news or are we close to full Google
@@ -12,7 +12,8 @@ summary: >-
 tags:
   - post
 ---
-The end of 2018 came with one of the most surprising news on the web’s pocket universe: Microsoft will cease to develop EdgeHTML / Chakra and will use [Chromium for Edge’s internals instead](https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md). In hindsight, maybe there [were a few hints](https://9to5google.com/2018/11/19/microsoft-google-chrome-windows-10-arm/) that Microsoft was heading in this direction, but it was very surprising nevertheless. What was unsurprising, however, were the reactions to this move: for the majority of people, the *gasp* was followed by a “finally!” and I was one of them.
+
+The end of 2018 came with one of the most surprising news on the web’s pocket universe: Microsoft will cease to develop EdgeHTML / Chakra and will use [Chromium for Edge’s internals instead](https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md). In hindsight, maybe there [were a few hints](https://9to5google.com/2018/11/19/microsoft-google-chrome-windows-10-arm/) that Microsoft was heading in this direction, but it was very surprising nevertheless. What was unsurprising, however, were the reactions to this move: for the majority of people, the _gasp_ was followed by a “finally!” and I was one of them.
 
 While Edge’s performance and feature compatibility are somewhat good, new features can take a while to land in the platform since they’re tied with the Windows 10 release cycle. But the real issue for me is the Inspect Tool. It’s completely bizarre that the company who famously shouted “DEVELOPERS! DEVELOPERS! DEVELOPERS!” and offers some of the best-in-class tools for said developers also ships a tool that’s 5 years or more behind the competition. As I was celebrating the death of Inspect Tool I couldn’t help but wonder if this was good news to the internet as a whole.
 
@@ -24,8 +25,8 @@ Browser monoculture is not a new topic; we’ve been debating this subject on an
 
 While I won’t go on bashing Internet Explorer, there’s nothing new I can bring to the subject, I would like you to remember just this:
 
-* 2001 — Internet Explorer 6 release date
-* 2006 — Internet Explorer 7 release date
+- 2001 — Internet Explorer 6 release date
+- 2006 — Internet Explorer 7 release date
 
 Sure, there were a couple of Service Packs in between but overall the internet just took a 5 years nap. But 5 years after Internet Explorer 7 release, the internet looked very different. By 2011 Internet Explorer’s popularity was on free fall and Safari and Chrome were both taking off. And around the same time, the conversation about Browser Monoculture was resurfacing with now WebKit at the centre of the benefits and perils of one dominant platform. At the time WebKit powered two major players, Safari and Chrome, but was also used by smaller browsers like Android stock browser, Samsung Internet, Steam’s in-game browser, UC Browser, Opera announced the switch to WebKit in 2013 (and then to Blink), etc..
 It is important to keep in mind that IE6 monoculture was very different than WebKit’s. One had one company developing one browser, the other has multiple companies and individuals developing one engine that powers multiple browsers. And the more I think about it the less I know which one is worse.

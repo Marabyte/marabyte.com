@@ -6,11 +6,11 @@
   <h3>
     <a href="{{ '/' | url }}">{{ metadata.title }}</a>
   </h3>
-  <nav class="hidden">
+  <nav class="">
     <ul class="flex items-center">
-      <li><a href="{{ '/posts' | url }}">Blog</a></li>
-      <li><a href="{{ '/about' | url }}">About</a></li>
-      <li>{% include "./../search/search.njk" %}</li>
+      <li><a href="{{ '/posts/' | url }}">Blog</a></li>
+      <li><a href="{{ '/about/' | url }}">About</a></li>
+      {# <li>{% include "./../search/search.njk" %}</li> #}
     </ul>
   </nav>
 </header>

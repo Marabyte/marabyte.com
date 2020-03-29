@@ -5,13 +5,14 @@ templateClass: tmpl-home
 <style>
   {{"site/_includes/layouts/home.scss" | sass | safe}}
 </style>
-<section class="home flex flex-col md:flex-row justify-center items-center container mx-auto px-4">
-  {# {{ content | safe }} #}
-  {% include "icons/hugo.njk" %}
-  <article>
-    <h2>Hello there!</h2>
-    <p>This is the awkward bit where I talk about myself</p>
-    <p>I've been dabbling in "the web" for more than 20 years. It began by looking under the hood with "view source" while building my first website in the school' server.</p>
-    <p>For the past 10 years, I've been building websites and services professionally, and what a ride it has been. I've worked with startups and well established global companies, all with different challenges but all equally interesting.</p>
-  </article>
+
+<section class="flex flex-col mx-auto container px-4 mt-16">
+  <h2 class="text-2xl mb-8">Look at that! I wrote a few things :</h2>
+  <section class="container mx-auto">
+    {%- for post in collections.post | reverse -%}
+    {% set index = loop.index %}
+      {% include "components/mini-card/mini-card.njk" %}
+    {%- endfor -%}
+    <p class="mt-16 md:ml-40 md:pl-8">And there's more! I wrote a few <a href="/posts/" >more posts</a>.</p>
+  </section>
 </section>
