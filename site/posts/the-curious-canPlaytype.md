@@ -12,7 +12,7 @@ summary: A reflection on the tech evolution of my personal website.
 tags:
   - post
 ---
-One of the great chalanges in coding is naming stuff. And by stuff I mean variables, functions, methods, responses, everything that needs a name.
+One of the great challenges in coding is naming stuff. And by stuff, I mean variables, functions, methods, responses, everything that needs a name.
 
 ```javascript
 const audio = document.createElement('audio');
