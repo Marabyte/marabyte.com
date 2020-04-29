@@ -12,7 +12,9 @@ tags:
 - post
 
 ---
-One of the great challenges in coding is naming stuff. And by stuff, I mean variables, functions, methods, responses, everything that needs a name.
+One of the great challenges in coding is naming stuff. And by stuff, I mean variables, functions, methods, responses, everything that needs a name - all the stuff.
+
+Over the years I went from naming my variables something short like 'newImg' to something more descriptive like 'imageAfterTransformation'. At least that's what I like to think, that all my functions and variables are descriptive.
 
 ```javascript
 const audio = document.createElement('audio');
@@ -31,4 +33,4 @@ if (canPlayOgg === '') {
 }
 ```
 
-I mean 
+I mean
