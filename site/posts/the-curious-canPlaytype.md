@@ -14,7 +14,15 @@ tags:
 ---
 One of the great challenges in coding is naming stuff. And by stuff, I mean variables, functions, methods, responses, everything that needs a name - all the stuff.
 
-Over the years I went from naming my variables something short like 'newImg' to something more descriptive like 'imageAfterTransformation'. At least that's what I like to think, that all my functions and variables are descriptive.
+Over the years I went from naming my variables something short like 'newImg' to something more descriptive like 'imageAfterTransformation', I know it seems obvious but sometimes it's hard to name things. You have an array of images, 'imagesArray' and then somehow you get a second image array and you end up with 'imagesArray2'.
+
+The struggle is real.
+
+So, I take comfort knowing that even the people working on web standards face the same challenge.
+
+Exhibit A: The [canPlaytype()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType) method.
+
+If you need to test the browser to check if a media file is playable `canPlayType()` is here to help.
 
 ```javascript
 const audio = document.createElement('audio');
