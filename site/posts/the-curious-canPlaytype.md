@@ -41,6 +41,6 @@ if (canPlayOgg === '') {
 }
 ```
 
-That's right. `canPlayType()` returns 3 results: `maybe`, `probably` and an empty string. English is not my first language, so I thought I was missing some nuance between them but after asking around I couldn't get an agreement on the difference between `maybe` and `probably`. 
+That's right. `canPlayType()` returns 3 results: `maybe`, `probably` and an empty string. English is not my first language, so I thought I was missing some nuance between them but after asking around I couldn't get an agreement on the difference between `maybe` and `probably`.
 
-I like these Javascript quirkiness's, they jeep me on my toes.   
+I like these Javascript quirkiness's, they keep me on my toes.
