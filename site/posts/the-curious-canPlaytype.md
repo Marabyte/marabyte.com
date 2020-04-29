@@ -22,7 +22,7 @@ So, I take comfort knowing that even the people working on web standards face th
 
 Exhibit A: The [canPlaytype()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/canPlayType) method.
 
-If you need to test the browser to check if a media file is playable `canPlayType()` is here to help.
+If you need to test the browser to check if a media file is playable `canPlayType()` is here to help, check the code snippet bellow:
 
 ```javascript
 const audio = document.createElement('audio');
@@ -41,4 +41,6 @@ if (canPlayOgg === '') {
 }
 ```
 
-I mean
+That's right. `canPlayType()` returns 3 results: `maybe`, `probably` and an empty string. English is not my first language, so I thought I was missing some nuance between them but after asking around I couldn't get an agreement on the difference between `maybe` and `probably`. 
+
+I like these Javascript quirkiness's, they jeep me on my toes.   
