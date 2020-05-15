@@ -35,7 +35,7 @@ WordPress was a game changer for me. No more writing posts on Word, copy/paste t
 
 PHP was easy learn, or at least, learn enough to build templates for my blog and there were thousands of plugins and themes for WordPress that I could mix and match to make the website more unique.
 
-And for a very long time WordPress powered my blog. New content became infrequent but I would still spend a lot of time tweaking the website, coding was definitely more fun than writing content.
+And for a very long time WordPress powered my blog. New content became infrequent, but I would still spend a lot of time tweaking the website, coding was definitely more fun than writing content.
 
 I think WordPress doesn't get enough credit for how accessible the Internet became thanks to it.
 
@@ -45,4 +45,14 @@ In 2014 I started to work in an AngularJS webapp and got excited with the idea o
 
 ###### (Buy me a pint and I'll tell you the story about bash scripts.)
 
-Luckily, towards the end of the year I went to a meetup where they demoed a REST plugin for WordPress. 
+Luckily, towards the end of the year I went to a meetup where they demoed a REST plugin for WordPress. In my head it was an all-new world, I could do all kinds of fancy transitions between pages, everything would be cached in a CDN and the app-like behaviour... it would be magical.
+
+Not everything went as I expected but the result was not bad at all. I learnt a few tricks while developing my personal site and eventually used them at work for our clients.
+
+And from AngularJS I went to Angular. The transition was hard, and it took me much, much longer than I thought but again, nothing like a pet project to learn new stuff.
+
+After the Angular rebuild I started several attempts to rebuild my website with other frameworks/libraries but never quite finished any.
+
+Everyone was in love with React. At work, in meetups, in the twitterverse, everyone was mad about it. And if you were not on the React wave you could not have lunch with the cool kids.
+
+So, I started to rebuild my website with React but eventually gave up. Fighting webpack was almost a fulltime job and Redux did not helped one bit to the developer experience. I was getting frustrated and not seeing any real benefits compared to what I already had.
