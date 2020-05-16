@@ -1,5 +1,5 @@
 <article class="mb-8 max-w-4xl flex flex-col md:flex-row">
-    <img alt="{{post.data.featured_image.alt}}" class="mr-8 w-full md:w-40 h-40 object-cover" src="{{post.data.featured_image.src}}" height="50" width="50" />
+    <img alt="{{post.data.featured_image.alt}}" loading="lazy" class="mr-8 w-full md:w-40 h-40 object-cover" src="{{post.data.featured_image.src}}" height="50" width="50" />
     <section class="flex flex-col pt-4">
         <small class="block mb-2">Posted on <time datetime="{{post.data.date}}">{{post.data.date | date}}</time></small>
         <a href="{{post.url}}"><h2 class="text-xl">{{post.data.title}}</h2></a>
