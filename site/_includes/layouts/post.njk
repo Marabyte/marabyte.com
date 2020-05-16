@@ -14,8 +14,6 @@ templateClass: tmpl-post
 {% endif %}
 <article class="article px-4 md:px-0 container mx-auto ">
   <header class="mb-4">
-    <time class="block mx-auto max-w-xl" datetime="{{date}}">{{date | date}}</time>
-    <h1 class="font-bold text-2xl text-4xl mb-2 antialiased mx-auto max-w-3xl">{{title}}</h1>
     {% if featured_image %}
       <figure>
         <img class="object-cover h-64 w-full" {% if featured_image.alt %} alt="{{featured_image.alt}}" {% endif %} class="article__hero" loading="lazy" heigth="356" width="576" src="{{featured_image.src | url}}">
@@ -24,6 +22,8 @@ templateClass: tmpl-post
         {% endif %}
       </figure>
     {% endif %}
+  <time class="block mx-auto mt-4 max-w-3xl" datetime="{{date}}">{{date | date}}</time>
+  <h1 class="font-bold text-2xl text-4xl mb-2 antialiased mx-auto max-w-3xl">{{title}}</h1>
   </header>
   <section class="leading-relaxed mx-auto max-w-3xl">
     {{ content | safe }}
