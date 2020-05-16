@@ -42,7 +42,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "NewsArticle",
+      "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "https://google.com/article"
@@ -52,7 +52,7 @@
         "{{metadata.url + featured_image.src + '.png'}}"
        ],
       "datePublished": "{{date.toISOString()}}",
-      {# "dateModified": "{{page.lastMod.toISOString()}}", #}
+      "dateModified": "{{date.toISOString()}}",
       "author": {
         "@type": "Person",
         "name": "Hugo Nogueira"
