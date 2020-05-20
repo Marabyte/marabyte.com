@@ -1,13 +1,15 @@
 ---
 title: The curious CanPlayType()
-date: 2020-02-27T16:07:10Z
+date: 2020-02-27T16:07:10.000+00:00
 code: true
 featured_image:
   alt: A vector geometric representation of a silhouette photo of mountain during
     night time
   caption: Photo by Vincentiu Solomon on Unsplash
   src: "/uploads/vincentiu-solomon-ln5drpv_imi-unsplash.svg"
-summary: A reflection on the tech evolution of my personal website.
+summary: One of the great challenges in coding is naming stuff. And by stuff, I mean
+  variables, functions, methods, responses, everything that needs a name - all the
+  stuff. And I'm not alone.
 tags:
 - post
 
