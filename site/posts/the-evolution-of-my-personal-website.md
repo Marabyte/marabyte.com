@@ -41,7 +41,7 @@ I think WordPress doesn't get enough credit for how accessible the Internet beca
 
 ### Rise of complexity
 
-In 2014 I started to work in an AngularJS webapp and got excited with the idea of WordPress powering the content and AngularJS the frontend. We were doing something similar at work, but it involved purpose-built plugins and bash scripts, I didn't quite understand all the setup behind it and until this day I am afraid of bash scripts. 
+In 2014 I started to work in an AngularJS webapp and got excited with the idea of WordPress powering the content and AngularJS the frontend. We were doing something similar at work, but it involved purpose-built plugins and bash scripts, I didn't quite understand all the setup behind it and until this day I am afraid of bash scripts.
 
 ###### (Buy me a pint and I'll tell you the story about bash scripts.)
 
@@ -55,4 +55,10 @@ After the Angular rebuild I started several attempts to rebuild my website with 
 
 Everyone was in love with React. At work, in meetups, in the twitterverse, everyone was mad about it. And if you were not on the React wave you could not have lunch with the cool kids.
 
-So, I started to rebuild my website with React but eventually gave up. Fighting webpack was almost a fulltime job and Redux did not helped one bit to the developer experience. I was getting frustrated and not seeing any real benefits compared to what I already had.
+So, I started to rebuild my website with React but eventually gave up. Fighting webpack was almost a fulltime job and Redux did not helped one bit to the developer experience. I was getting frustrated and not seeing any real benefits compared to what I already had. The AngularJS to Angular was time consuming enough, I was not ready to invest the same amount of time in a new framework.
+
+Instead, I spent my spare time trying to put Angular on a diet. While overall I was happy with the site, the amount of JavaScript required was a bit of concern. 70KB of compressed JavaScript for a blog is way too much. After a good combination of exercise and diet I managed to get a respectable 90 on Page Speed Insights.
+
+But the bundle size was still annoying me, it was way too big. Initially it was an incentive to look at React again, but after looking at other projects the gains were not very impressive.
+
+> ### Less but better
