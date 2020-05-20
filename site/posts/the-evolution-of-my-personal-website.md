@@ -18,7 +18,7 @@ My first blog was hosted on bloger.com even before the Google acquisition and I 
 
 As my interest on web development grew, I started to build my own website. There was a Portuguese hosting service that would allow you to host websites for free, but you couldn't run any server-side code, just serving static files.
 
-In the beginning, I felt like a wizard! I spent ages trying to figure out how to build the template I wanted, and I annoyed [my friend Pedro](https://store.steampowered.com/app/557340/My_Friend_Pedro/) with hundreds of CSS questions:
+In the beginning, I felt like a wizard! I spent ages trying to figure out how to build the template I wanted, and I annoyed [my friend Pedro](https://store.steampowered.com/app/557340/My_Friend_Pedro/ "My Friend Pedro") with hundreds of CSS questions:
 
 * "How do I put this bit here but with the text like this?"
 * "Why aren't these two aligned?"
@@ -35,7 +35,7 @@ WordPress was a game changer for me. No more writing posts on Word, copy/paste t
 
 PHP was easy learn, or at least, learn enough to build templates for my blog and there were thousands of plugins and themes for WordPress that I could mix and match to make the website more unique.
 
-And for a very long time WordPress powered my blog. New content became infrequent, but I would still spend a lot of time tweaking the website, coding was definitely more fun than writing content.
+And for a very long time WordPress powered my blog. New content became infrequent, but I would still spend a lot of time tweaking the website, coding was more fun than writing content.
 
 I think WordPress doesn't get enough credit for how accessible the Internet became thanks to it.
 
@@ -57,8 +57,34 @@ Everyone was in love with React. At work, in meetups, in the twitterverse, every
 
 So, I started to rebuild my website with React but eventually gave up. Fighting webpack was almost a fulltime job and Redux did not helped one bit to the developer experience. I was getting frustrated and not seeing any real benefits compared to what I already had. The AngularJS to Angular was time consuming enough, I was not ready to invest the same amount of time in a new framework.
 
-Instead, I spent my spare time trying to put Angular on a diet. While overall I was happy with the site, the amount of JavaScript required was a bit of concern. 70KB of compressed JavaScript for a blog is way too much. After a good combination of exercise and diet I managed to get a respectable 90 on Page Speed Insights.
+Instead, I spent my spare time trying to put Angular on a diet. While overall I was happy with the site, but the amount of JavaScript required was a bit of concern. 70kB of compressed JavaScript for a blog is way too much. After a good combination of exercise and diet I managed to get a respectable 90 on Page Speed Insights.
 
 But the bundle size was still annoying me, it was way too big. Initially it was an incentive to look at React again, but after looking at other projects the gains were not very impressive.
 
-> ### Less but better
+### Less but better
+
+Thanks to [Jake](https://twitter.com/jaffathecake "Jake Archibald's twitter page") and [Surma](https://twitter.com/DasSurma "Surma's twitter page") I discovered Preact. The project selling point is "Fast **3kB** alternative to React with the same modern API." and that caught my eye. It was a good opportunity to get on the JSX wagon and make some serious improvements on the site's performance.
+
+I must admit, I'm not a huge fan of JSX. Angular's and Vue's approach feels more natural to me, having a bit of JavaScript on my HTML seems more natural than having a bit of HTML and CSS on my JavaScript. But I also don't dislike it, JSX also has its merits so I guess I'm neutral about it.
+
+I was close to have the brand-new website ready when I started to think about pre-rendering the pages. I had built a very scalable setup to prerender the 50k pages for my company's main website and thought that I could apply the same logic to a smaller website and would just need to swap some Angular specific bits with Preact.
+
+And just like that, I realized the irony of all of it. I went from a static WordPress website to  Preact that I would then prerender. Do I really need the complexity?
+
+No, no I don't.
+
+Maybe I just need a Static Site Generator and the obvious choice for was [Hugo](https://gohugo.io/ "Hugo website"). If you're wondering why it is obvious, my first name is Hugo.
+
+Fast forward a few months and I was getting stuck with Hugo. I think the project is brilliant and it generates templates incredibly fast but whenever I needed some functionality that was not provided by default, I would spend hours to do basic stuff. Go seems great but it's out of my comfort zone.
+
+And so, another project is shelved. 
+
+It took me a couple of months to get interested again in revisiting the website, but the wait was worth it. [Eleventy](https://www.11ty.dev/ "Eleventy's project page") has everything that I was looking for. It's fast, easy to setup, great community, built with JavaScript and an easy to understand plugin API.
+
+In just a couple of days I re-wrote the website and I was amazed how simple and obvious most things were to implement.
+
+I work on large-ishy websites and webapps at work, and it's easy get down the spiral of using the same tools for all projects. Afterall, when you have a hammer, all problems are nails.
+
+It is very refreshing to get back to basics and just write HTML, CSS, and the very minimal JavaScript.
+
+If you made it until the end, I am truly thankful, and you should treat yourself with a cup of tea and some nice biscuits.
