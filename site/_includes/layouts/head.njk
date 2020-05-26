@@ -10,15 +10,16 @@
   <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png" />
   {% if templateClass === 'tmpl-post' %}
   <meta property="og:type" content="article" />
+  <meta property="og:image" content="{{  metadata.url + featured_image.src + '.png' }}" />
   {% endif %}
   {% if templateClass !== 'tmpl-post' %}
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="{{ metadata.image }}" />
   {% endif %}
   <meta property="og:title" content="{{ title or metadata.title }}" />
   <meta property="og:description" content="{{ summary or metadata.description }}" />
   <meta property="og:url" content="{{ metadata.url + page.url or metadata.url + '/' }}" />
   <meta property="og:site_name" content="Home of the Marabyte" />
-  <meta property="og:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}" />
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
   <meta property="og:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
