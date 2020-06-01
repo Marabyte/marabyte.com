@@ -30,3 +30,5 @@ fields:
 - type: list
   name: tags
   label: tags
+pages:
+- site/posts/how-to-deploy-android-app-bundle-with-cordova-and-fastlane.md
