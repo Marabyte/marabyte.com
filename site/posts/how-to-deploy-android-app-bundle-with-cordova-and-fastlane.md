@@ -4,8 +4,8 @@ date: 2020-05-17T00:00:00+01:00
 code: true
 featured_image:
   alt: ''
-  caption: ''
-  src: ''
+  caption: A geometrized version of a photo by Avinash Kumar on Unsplash
+  src: "/uploads/leaves_avinash_kumar.svg"
 summary: Google's Play Store offers a smarter way to deploy Android apps and the good
   news it just requires a small change in your current Fastlane and Cordova setup.
 tags:
