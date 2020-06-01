@@ -1,0 +1,15 @@
+---
+layout: layouts/base.njk
+templateClass: tmpl-post
+---
+
+<style>
+  {{"site/_includes/components/card/card.scss" | sass | safe}}
+</style>
+
+<section class="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-5">
+{%- for post in collections.post | reverse -%}
+{% set index = loop.index %}
+  {% include "components/card/card.njk" %}
+{%- endfor -%}
+</section>
