@@ -1,16 +1,14 @@
 ---
 title: The evolution of my personal website
-date: 2020-02-23T16:07:10.122+00:00
+date: 2020-02-23T16:54:06.154Z
 featured_image:
   alt: A vector geometric representation of the breaking dawn
   caption: Photo by Aperture Vintage on Unsplash
   src: "/uploads/breaking-dawn.svg"
 summary: A reflection on the tech evolution of my personal website.
 tags:
-- post
-
----
-I've been having a blog on and off for quite some time now.
+  - post
+---I've been having a blog on and off for quite some time now.
 
 My first blog was hosted on bloger.com even before the Google acquisition and I was quite active back then. It wasn't tech related back then; I would write about some new film I had watched, the latest on teenage drama or just pure nonsense.
 
@@ -20,10 +18,10 @@ As my interest on web development grew, I started to build my own website. There
 
 In the beginning, I felt like a wizard! I spent ages trying to figure out how to build the template I wanted, and I annoyed [my friend Pedro](https://store.steampowered.com/app/557340/My_Friend_Pedro/ "My Friend Pedro") with hundreds of CSS questions:
 
-* "How do I put this bit here but with the text like this?"
-* "Why aren't these two aligned?"
-* "Why is Firefox looking so different then IE?"
-* "Are you sure I can't just use a <div> for everything? It works just fine!"
+- "How do I put this bit here but with the text like this?"
+- "Why aren't these two aligned?"
+- "Why is Firefox looking so different then IE?"
+- "Are you sure I can't just use a <div> for everything? It works just fine!"
 
 I might have been a pain to Pedro, but it was extremely rewarding to see the page after hacking all the CSS and HTML together.
 
@@ -69,7 +67,7 @@ I must admit, I'm not a huge fan of JSX. Angular's and Vue's approach feels more
 
 I was close to have the brand-new website ready when I started to think about pre-rendering the pages. I had built a very scalable setup to prerender the 50k pages for my company's main website and thought that I could apply the same logic to a smaller website and would just need to swap some Angular specific bits with Preact.
 
-And just like that, I realized the irony of all of it. I went from a static WordPress website to  Preact that I would then prerender. Do I really need the complexity?
+And just like that, I realized the irony of all of it. I went from a static WordPress website to Preact that I would then prerender. Do I really need the complexity?
 
 No, no I don't.
 
@@ -77,7 +75,7 @@ Maybe I just need a Static Site Generator and the obvious choice for was [Hugo](
 
 Fast forward a few months and I was getting stuck with Hugo. I think the project is brilliant and it generates templates incredibly fast but whenever I needed some functionality that was not provided by default, I would spend hours to do basic stuff. Go seems great but it's out of my comfort zone.
 
-And so, another project is shelved. 
+And so, another project is shelved.
 
 It took me a couple of months to get interested again in revisiting the website, but the wait was worth it. [Eleventy](https://www.11ty.dev/ "Eleventy's project page") has everything that I was looking for. It's fast, easy to setup, great community, built with JavaScript and an easy to understand plugin API.
 
