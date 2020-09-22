@@ -16,7 +16,7 @@ templateClass: tmpl-post
   <header class="mb-4">
     {% if featured_image %}
       <figure>
-        <img class="object-cover h-64 w-full" {% if featured_image.alt %} alt="{{featured_image.alt}}" {% endif %} class="article__hero" loading="lazy" heigth="356" width="576" src="{{featured_image.src | url}}">
+        <img class="object-cover h-64 w-full" {% if featured_image.alt %} alt="{{featured_image.alt}}" {% endif %} class="article__hero" src="{{featured_image.src | url}}">
         {% if featured_image.caption %}
           <figcaption class="mx-auto max-w-3xl text-xs pt-2">{{featured_image.caption | safe}}</figcaption>
         {% endif %}

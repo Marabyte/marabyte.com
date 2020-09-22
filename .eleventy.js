@@ -3,6 +3,7 @@ const tailwindBuild = require("./lib/tailwind.11ty");
 const htmlmin = require("./lib/html-minify.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pictureBuilder = require("./lib/picture.11ty");
 
 module.exports = function(eleventyConfig) {
   // Input directory: src
@@ -19,6 +20,8 @@ module.exports = function(eleventyConfig) {
 
   // Transforms
   eleventyConfig.addTransform("htmlmin", htmlmin);
+  eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
+
 
   eleventyConfig.addPlugin(pluginRss);
 };
