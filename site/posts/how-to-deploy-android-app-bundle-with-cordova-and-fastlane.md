@@ -1,21 +1,20 @@
 ---
 title: How to deploy Android App Bundle with Cordova and Fastlane
-date: 2020-05-17T16:54:06.154Z
+date: 2020-05-17T16:54:06.154+00:00
 code: true
 featured_image:
-  alt: ""
+  alt: ''
   caption: A geometrized version of a photo by Avinash Kumar on Unsplash
-  src: /uploads/leaves_avinash_kumar.svg
-summary: >-
-  Google's Play Store offers a smarter way to deploy Android apps and the good
+  src: "/uploads/leaves_avinash_kumar.svg"
+summary: Google's Play Store offers a smarter way to deploy Android apps and the good
   news it just requires a small change in your current Fastlane and Cordova setup.
 tags:
-  - cordova
-  - fastlane
-  - android
-  - post
----
+- cordova
+- fastlane
+- android
+- post
 
+---
 If you have an app on Google's Play Store you may have seen this warning on Google Play Console.
 
 ![Google warning indicating the app could be 5.8% smaller if we switch from Application Package files to App bundle files](/uploads/android_app_bundle.jpg "Android's App Bundle call to action ")
@@ -54,10 +53,22 @@ supply(aab: './platforms/android/app/build/outputs/bundle/release/app.aab', trac
 ...
 ```
 
-And that's it! Free savings!
+And a `build.json` file in the project's root:
 
-### How does it work?
+```json
+{
+  "android": {
+    "release": {
+      "packageType": "bundle"
+    }
+  }
+}
+```
+
+That's it! Free savings!
+
+## How does it work?
 
 The `supply` plugin already supports builds with .aab files, we just need a path to the file. You'll notice in the original code we're using the environment variable `CORDOVA_ANDROID_RELEASE_BUILD_PATH` instead of the actual path. That's because `cordova` plugin is exposing the path to the .apk but not the .abb.
 
-Don't feel discouraged by the small percentage gains. Your mileage may vary depending how many low-level APIs you are using.
+Don't feel discouraged by the small percentage gains. Your mileage may vary depending how many low-level APIs you are using but smaller bundle file with very little effort is always a good thing.
