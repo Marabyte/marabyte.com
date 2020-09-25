@@ -4,8 +4,9 @@
   "description": "Home of the Marabyte",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy --input=site",
-    "start": "npx @11ty/eleventy --input=site --serve",
+    "build": "npm run tailwind && ELEVENTY_ENV=production npx @11ty/eleventy --input=site",
+    "start": "npm run tailwind && ELEVENTY_ENV=development npx @11ty/eleventy --input=site --serve",
+    "tailwind": "npx tailwindcss build ./site/_assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -51,12 +52,13 @@
     "postcss": "^8.0.9",
     "postcss-import": "^12.0.1",
     "prettier": "^1.18.2",
+    "purgecss-from-html": "^3.0.0",
     "rollup": "^2.3.3",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^5.3.0",
     "sass": "^1.26.3",
     "sharp": "^0.26.1",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "^1.8.10",
     "typescript": "^3.8.3"
   }
 }

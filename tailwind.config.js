@@ -12,5 +12,9 @@ module.exports = {
         xxl: "1480px"
       }
     }
+  },
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true
   }
 };
