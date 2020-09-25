@@ -33,12 +33,13 @@
   <meta property="twitter:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}">
   <meta property="twitter:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
   <link rel="preload" href="/assets/fonts/firaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  {% if config.environment == "development" %}
+    <link href="/assets/styles/tailwind.css" rel="stylesheet" type="text/css">
+  {% endif %}
   <style>
     {{"site/_assets/styles/styles.scss" | sass | safe}}
   </style>
-  <style>
-    {{"site/_assets/styles/global.css" | tailwind | safe}}
-  </style>
+
   {% if templateClass === 'tmpl-post' %}
     <script type="application/ld+json">
     {

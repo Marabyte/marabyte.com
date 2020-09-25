@@ -1,11 +1,36 @@
 @import "utilities";
 @import "fonts";
 
+/** GLOBAL CSS **/
+
 :root {
   --accent-color: #{$accent-color};
   --base-color: #{$base-color};
   --links-color: #{$links-color};
   --primary-color: #{$primary-color};
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Fira;
+  color: var(--accent-color);
+}
+
+a,
+a:active,
+a:focus,
+a:link,
+a:visited {
+  color: var(--links-color);
 }
 
 .article {

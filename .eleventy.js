@@ -1,9 +1,9 @@
 const sassBuild = require("./lib/sass.11ty");
-const tailwindBuild = require("./lib/tailwind.11ty");
 const htmlmin = require("./lib/html-minify.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pictureBuilder = require("./lib/picture.11ty");
+const cssmin = require("./lib/css-minify.11ty");
 
 module.exports = function(eleventyConfig) {
   // Input directory: src
@@ -12,15 +12,22 @@ module.exports = function(eleventyConfig) {
   // Add filters to Nunjucks
   eleventyConfig.addFilter("date", dateFormat);
   eleventyConfig.addFilter("sass", sassBuild);
-  eleventyConfig.addNunjucksAsyncFilter("tailwind", tailwindBuild);
 
   // The following copies to `_site/assets`
-  eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy("site/uploads");
+  eleventyConfig.addPassthroughCopy("site/assets");
+
+
+  console.log('ENV:', process.env.ELEVENTY_ENV);
 
   // Transforms
-  eleventyConfig.addTransform("htmlmin", htmlmin);
-  eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
+
+  if (process.env.ELEVENTY_ENV === 'production') {
+    eleventyConfig.addTransform("htmlmin", htmlmin);
+    eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
+    eleventyConfig.addTransform("cssmin", cssmin);
+  }
+
 
 
   eleventyConfig.addPlugin(pluginRss);
