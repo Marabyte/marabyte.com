@@ -3,7 +3,8 @@ const htmlmin = require("./lib/html-minify.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pictureBuilder = require("./lib/picture.11ty");
-const cssmin = require("./lib/css-minify.11ty");
+const tinyCSS = require("@greyskullrocks/eleventy-plugin-tinycss");
+
 
 module.exports = function(eleventyConfig) {
   // Input directory: src
@@ -25,7 +26,7 @@ module.exports = function(eleventyConfig) {
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addTransform("htmlmin", htmlmin);
     eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
-    eleventyConfig.addTransform("cssmin", cssmin);
+    eleventyConfig.addTransform("tinyCSS", tinyCSS);
   }
 
 
