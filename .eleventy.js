@@ -26,10 +26,8 @@ module.exports = function(eleventyConfig) {
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addTransform("htmlmin", htmlmin);
     eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
-    eleventyConfig.addTransform("tinyCSS", tinyCSS);
   }
 
-
-
+  eleventyConfig.addPlugin(tinyCSS);
   eleventyConfig.addPlugin(pluginRss);
 };
