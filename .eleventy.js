@@ -7,8 +7,6 @@ const tinyCSS = require("@greyskullrocks/eleventy-plugin-tinycss");
 
 
 module.exports = function(eleventyConfig) {
-  // Input directory: src
-  // Output directory: _site
 
   // Add filters to Nunjucks
   eleventyConfig.addFilter("date", dateFormat);
@@ -18,16 +16,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/uploads");
   eleventyConfig.addPassthroughCopy("site/assets");
 
-
-  console.log('ENV:', process.env.ELEVENTY_ENV);
-
-  // Transforms
-
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addTransform("htmlmin", htmlmin);
     eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
+    eleventyConfig.addPlugin(tinyCSS, {purgeCSS: {keyframes: true}});
+    eleventyConfig.addPlugin(pluginRss);  
   }
 
-  eleventyConfig.addPlugin(tinyCSS);
-  eleventyConfig.addPlugin(pluginRss);
 };
