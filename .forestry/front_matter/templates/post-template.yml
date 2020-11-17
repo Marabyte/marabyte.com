@@ -32,3 +32,4 @@ fields:
   label: tags
 pages:
 - site/posts/how-to-deploy-android-app-bundle-with-cordova-and-fastlane.md
+- site/posts/make-that-css-tiny.md
