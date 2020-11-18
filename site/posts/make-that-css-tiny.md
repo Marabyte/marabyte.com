@@ -19,4 +19,19 @@ The most basic step is a mix of minification and compression. This alone can red
 
 Well, minification is a technique where the file contents are parsed, and all sorts of clever tricks are used to save/reduce every byte.
 
-In a CSS file, for example, all the whitespace is removed
+In a CSS file, for example, all the whitespace is removed since the CSS parser doesn't need spaces or new lines to interpret the style rules, like this:
+
+Before
+```css
+.a {
+  color: red;
+}
+
+#b {
+  display: flex;
+}
+```
+After
+```css
+.a{color:red;}#b{display:flex;}
+```
