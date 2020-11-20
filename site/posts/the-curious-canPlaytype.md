@@ -12,6 +12,7 @@ summary:
   One of the great challenges in coding is naming stuff. And by stuff, I mean all the
   stuff. And I'm not alone.
 tags:
+  - post
   - javascript
 ---
 
