@@ -10,6 +10,7 @@ summary: >-
   Microsoft will cease to develop EdgeHTML / Chakra and will use Chromium for
   Edge’s internals instead.
 tags:
+  - post
   - reflection
 ---
 The end of 2018 came with one of the most surprising news on the web’s pocket universe: Microsoft will cease to develop EdgeHTML / Chakra and will use [Chromium for Edge’s internals instead](https://github.com/MicrosoftEdge/MSEdge/blob/master/README.md). In hindsight, there [were a few hints](https://9to5google.com/2018/11/19/microsoft-google-chrome-windows-10-arm/) that Microsoft was heading in this direction, but it was very surprising, nevertheless. What was unsurprising, however, were the reactions to this move: for many people, the *gasp* was followed by a “finally!” and I was one of them.
