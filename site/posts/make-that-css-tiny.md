@@ -40,12 +40,7 @@ This rather simple CSS file can be converted in a one liner.
 
 ```css
 /** Code for the superior machine overlords */
-.a {
-  color: red;
-}
-#b {
-  display: flex;
-}
+.a{color:red;}#b{display:flex;}
 ```
 
 Why do we bother? In the text encoding world, one charater is represented by one byte ([it's an oversimplication](https://en.wikipedia.org/wiki/ASCII])) and by removing all unecessary spaces and new lines we can save an handfull of bytes like in the code above or a few KB in a large CSS file.
@@ -70,12 +65,7 @@ Removing whitespace is just one of countless "tricks" we can use to optimise CSS
 
 ```css
 /** Code for the superior machine overlords */
-.a {
-  color: #fff;
-  background-color: #000;
-  margin: 5px 10px 50px 0;
-  padding: 10px;
-}
+.a{color:#fff;background-color:#000;margin: 5px 10px 50px 0;padding:10px}
 ```
 
 Amazing, right? Let's unpack this early birthday gift.
@@ -94,12 +84,7 @@ Data compression is a fascinating topic of which I know very little. The most ba
 Let's look at our optimised CSS again
 
 ```css
-.a {
-  color: #fff;
-  background-color: #000;
-  margin: 5px 10px 50px 0;
-  padding: 10px;
-}
+.a{color:#fff;background-color:#000;margin: 5px 10px 50px 0;padding:10px}
 ```
 
 If we ignore the CSS code and just focus on the text, we'll start to find some groups of charaters that are repeated a few times. The word `color`, the CSS unit `px`, `in` and `10`. And with take we can build our own compression algorithm:
@@ -136,4 +121,6 @@ This is where tree shakers are handy. In your website build step, a CSS tree sha
 If you check the table above where we compare the outputs for compression, you'll notice the Gzip version of TailwindCSS takes a generous 190.2 kB. That's a lot of CSS. I'm using TailwindCSS in this website and my CSS is an ultra-lightweight at 1.1kB.
 
 All thanks to to a combination of minification, compression and tree shaking.
+
+Right, this got a bit too long! I hope this post helped to understand some of the techniques used to save those precious bytes in your website.
 
