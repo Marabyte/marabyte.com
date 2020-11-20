@@ -9,8 +9,22 @@
   p {
     margin-top: calc(1em + 0.5vw);
   }
-}
 
-.hugo {
-  float: left;
+  :not(pre) > code {
+    background: #2d2d2d;
+    color: #f8c555;
+    padding: 2px 4px;
+  }
+
+  li {
+    list-style: inside;
+    margin-bottom: 0.5rem;
+  }
+
+  table {
+    width: 100%;
+    thead, tr:not(:last-child) {
+      border-bottom: 2px solid var(--accent-color);
+    }
+  }
 }

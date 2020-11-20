@@ -11,6 +11,7 @@ module.exports = function(eleventyConfig) {
   // Add filters to Nunjucks
   eleventyConfig.addFilter("date", dateFormat);
   eleventyConfig.addFilter("sass", sassBuild);
+  eleventyConfig.addPlugin(pluginRss);  
 
   // The following copies to `_site/assets`
   eleventyConfig.addPassthroughCopy("site/uploads");
@@ -20,7 +21,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addTransform("htmlmin", htmlmin);
     eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
     eleventyConfig.addPlugin(tinyCSS, {purgeCSS: {keyframes: true}});
-    eleventyConfig.addPlugin(pluginRss);  
   }
 
 };
