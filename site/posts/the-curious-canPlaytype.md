@@ -9,8 +9,7 @@ featured_image:
   caption: Photo by Vincentiu Solomon on Unsplash
   src: "/uploads/vincentiu-solomon-ln5drpv_imi-unsplash.svg"
 summary:
-  One of the great challenges in coding is naming stuff. And by stuff, I mean
-  variables, functions, methods, responses, everything that needs a name - all the
+  One of the great challenges in coding is naming stuff. And by stuff, I mean all the
   stuff. And I'm not alone.
 tags:
   - post
