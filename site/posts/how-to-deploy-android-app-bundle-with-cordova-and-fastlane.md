@@ -1,13 +1,12 @@
 ---
-title: How to deploy Android App Bundle with Cordova and Fastlane
+title: How to deploy Android App Bundle
 date: 2020-05-17T16:54:06.154+00:00
 code: true
 featured_image:
   alt: ''
   caption: A geometrized version of a photo by Avinash Kumar on Unsplash
   src: "/uploads/leaves_avinash_kumar.svg"
-summary: Google's Play Store offers a smarter way to deploy Android apps and the good
-  news it just requires a small change in your current Fastlane and Cordova setup.
+summary: With just a small change in your current Fastlane and Cordova setup you can deploy smaller apps on Google's Play Store
 tags:
 - cordova
 - fastlane

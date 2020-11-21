@@ -1,5 +1,5 @@
 ---
-title: How do CSS optimisers work
+title: How do CSS optimisers work?
 date: 2020-10-02T13:00:00+01:00
 code: true
 featured_image:
