@@ -13,9 +13,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("sass", sassBuild);
   eleventyConfig.addPlugin(pluginRss);  
 
-  // The following copies to `_site/assets`
+  // The following copies to files or directories to the public directory
   eleventyConfig.addPassthroughCopy("site/uploads");
   eleventyConfig.addPassthroughCopy("site/assets");
+  eleventyConfig.addPassthroughCopy("_redirects");
+
 
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addTransform("htmlmin", htmlmin);
