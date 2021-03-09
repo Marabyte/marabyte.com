@@ -3,15 +3,16 @@ const htmlmin = require("./lib/html-minify.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pictureBuilder = require("./lib/picture.11ty");
-const tinyCSS = require("@greyskullrocks/eleventy-plugin-tinycss");
-
+const tinyCSS = require("@sardine/eleventy-plugin-tinycss");
+const safeLinks = require('@sardine/eleventy-plugin-external-links');
 
 module.exports = function(eleventyConfig) {
 
   // Add filters to Nunjucks
   eleventyConfig.addFilter("date", dateFormat);
   eleventyConfig.addFilter("sass", sassBuild);
-  eleventyConfig.addPlugin(pluginRss);  
+  eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(safeLinks);
 
   // The following copies to files or directories to the public directory
   eleventyConfig.addPassthroughCopy("site/uploads");
