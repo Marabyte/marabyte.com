@@ -1,9 +1,9 @@
 const sassBuild = require("./lib/sass.11ty");
-const htmlmin = require("./lib/html-minify.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const pictureBuilder = require("./lib/picture.11ty");
 const tinyCSS = require("@sardine/eleventy-plugin-tinycss");
+const tinyHTML = require("@sardine/eleventy-plugin-tinyhtml");
 const safeLinks = require('@sardine/eleventy-plugin-external-links');
 
 module.exports = function(eleventyConfig) {
@@ -21,9 +21,9 @@ module.exports = function(eleventyConfig) {
 
 
   if (process.env.ELEVENTY_ENV === 'production') {
-    eleventyConfig.addTransform("htmlmin", htmlmin);
     eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
     eleventyConfig.addPlugin(tinyCSS, {purgeCSS: {keyframes: true}});
+    eleventyConfig.addPlugin(tinyHTML);
   }
 
 };
