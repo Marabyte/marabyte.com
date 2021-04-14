@@ -92,12 +92,12 @@ Let's look at our optimised CSS again
 
 If we ignore the CSS code and just focus on the text, we'll start to find some groups of charaters that are repeated a few times. The word `color`, the CSS unit `px`, `in` and `10`. And with take we can build our own compression algorithm:
 
-```text
+```
 // compression index
 color=y,in=w,px=z,10=q
 ```
 
-```text
+```
 // Compressed code
 .a{y:#fff;background-y:#000;margw:5z qz 50z 0;paddwg:qz}
 ```
