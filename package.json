@@ -6,7 +6,7 @@
   "scripts": {
     "build": "npm run tailwind && ELEVENTY_ENV=production npx @11ty/eleventy --input=site",
     "start": "npm run tailwind && ELEVENTY_ENV=development npx @11ty/eleventy --input=site --serve",
-    "tailwind": "npx tailwindcss build ./site/_assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css",
+    "tailwind": "npx tailwindcss-cli build ./site/_assets/styles/tailwind.css -o ./_site/assets/styles/tailwind.css --no-autoprefixer",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -33,7 +33,6 @@
     "@sardine/eleventy-plugin-tinycss": "^1.5.0",
     "@sardine/eleventy-plugin-tinyhtml": "^0.1.0",
     "@saschazar/wasm-avif": "^1.0.0",
-    "autoprefixer": "^10.2.5",
     "image-size": "^0.9.1",
     "jsdom": "^16.4.0",
     "markdown-it": "^10.0.0",
@@ -42,6 +41,6 @@
     "prismjs": "^1.23.0",
     "sass": "^1.26.3",
     "sharp": "^0.26.1",
-    "tailwindcss": "^2.1.0"
+    "tailwindcss-cli": "^0.1.2"
   }
 }
