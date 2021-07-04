@@ -1,11 +1,12 @@
 const sassBuild = require("./lib/sass.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
-const pictureBuilder = require("./lib/picture.11ty");
 const codeHighlighter = require('@sardine/eleventy-plugin-code-highlighter');
 const tinyCSS = require("@sardine/eleventy-plugin-tinycss");
 const tinyHTML = require("@sardine/eleventy-plugin-tinyhtml");
 const safeLinks = require("@sardine/eleventy-plugin-external-links");
+const imageOptimiser = require('@sardine/eleventy-plugin-image-optimiser');
+
 
 const purgeFromTailwind = content => content.match(/[A-Za-z0-9-_:\/]+/g) || [];
 
@@ -24,7 +25,7 @@ module.exports = function(eleventyConfig) {
   if (process.env.ELEVENTY_ENV === "production") {
     
     eleventyConfig.addPlugin(safeLinks);  
-    eleventyConfig.addTransform("pictureBuilder", pictureBuilder);
+    eleventyConfig.addPlugin(imageOptimiser);
     eleventyConfig.addPlugin(tinyCSS, {
       purgeCSS: {
         keyframes: true,
