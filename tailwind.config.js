@@ -1,4 +1,8 @@
 module.exports = {
+  mode: 'jit',
+  purge: [
+    './site/**/*.{html,njk}',
+  ],
   theme: {
     extend: {
       height: {
