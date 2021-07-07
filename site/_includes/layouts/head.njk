@@ -32,10 +32,12 @@
   <meta property="twitter:description" content="{{ summary or metadata.description }}">
   <meta property="twitter:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}">
   <meta property="twitter:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
-  <link rel="preload" href="/assets/fonts/firaMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link href="/assets/styles/tailwind.css" rel="stylesheet" type="text/css">
+  <link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <style>
-    {{"site/_assets/styles/styles.scss" | sass | safe}}
+    {% css "site/_assets/styles/tailwind.css" %}
+  </style>
+  <style>
+    {% css "site/_assets/styles/styles.css" %}
   </style>
 
   {% if templateClass === 'tmpl-post' %}

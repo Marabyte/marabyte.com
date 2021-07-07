@@ -64,5 +64,3 @@ typings/
 _site
 .cache
 
-# ignores all css and css.map in components
-site/_includes/components/**/*.css*

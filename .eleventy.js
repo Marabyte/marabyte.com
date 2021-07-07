@@ -1,4 +1,4 @@
-const sassBuild = require("./lib/sass.11ty");
+const postCSS = require("./lib/postcss.11ty");
 const dateFormat = require("./lib/date.11ty");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 const codeHighlighter = require('@sardine/eleventy-plugin-code-highlighter');
@@ -13,9 +13,9 @@ const purgeFromTailwind = content => content.match(/[A-Za-z0-9-_:\/]+/g) || [];
 module.exports = function(eleventyConfig) {
   // Add filters to Nunjucks
   eleventyConfig.addFilter("date", dateFormat);
-  eleventyConfig.addFilter("sass", sassBuild);
   eleventyConfig.addPlugin(codeHighlighter);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addAsyncShortcode("css", postCSS);
 
   // The following copies to files or directories to the public directory
   eleventyConfig.addPassthroughCopy("site/uploads");
