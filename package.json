@@ -33,8 +33,6 @@
     "@sardine/eleventy-plugin-tinycss": "^1.5.0",
     "@sardine/eleventy-plugin-tinyhtml": "^0.1.0",
     "autoprefixer": "^10.2.6",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.7",
     "postcss": "^8.3.5",
     "prettier": "^1.18.2",
     "tailwindcss": "^3.0.13"
