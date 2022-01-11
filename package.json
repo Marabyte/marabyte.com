@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/Marabyte/marabyte.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-rss": "^1.0.7",
     "@sardine/eleventy-plugin-code-highlighter": "^1.1.2",
     "@sardine/eleventy-plugin-external-links": "^1.3.1",
@@ -33,10 +33,8 @@
     "@sardine/eleventy-plugin-tinycss": "^1.5.0",
     "@sardine/eleventy-plugin-tinyhtml": "^0.1.0",
     "autoprefixer": "^10.2.6",
-    "markdown-it": "^10.0.0",
-    "markdown-it-anchor": "^5.2.7",
     "postcss": "^8.3.5",
     "prettier": "^1.18.2",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^3.0.13"
   }
 }
