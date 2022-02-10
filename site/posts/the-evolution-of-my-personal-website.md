@@ -21,7 +21,7 @@ In the beginning, I felt like a wizard! I spent ages trying to figure out how to
 - "How do I put this bit here but with the text like this?"
 - "Why aren't these two aligned?"
 - "Why is Firefox looking so different then IE?"
-- "Are you sure I can't just use a <div> for everything? It works just fine!"
+- "Are you sure I can't just use a `<div>` for everything? It works just fine!"
 
 I might have been a pain to Pedro, but it was extremely rewarding to see the page after hacking all the CSS and HTML together.
 
