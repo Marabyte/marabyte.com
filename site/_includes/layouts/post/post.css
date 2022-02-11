@@ -3,6 +3,10 @@
     margin-bottom: calc(1em + 0.5vw);
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   h2 {
     font-size: 1.5rem;
     line-height: 1.25;
