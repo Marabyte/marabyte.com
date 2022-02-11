@@ -6,7 +6,7 @@ featured_image:
   alt: 'A geometric representation of train arriving the station'
   caption: 'Photo by JESHOOTS on Unsplash'
   src: '/uploads/train.svg'
-summary: ''
+summary: My notes for day two of Smashing Conference London 2018
 tags: []
 
 ---
