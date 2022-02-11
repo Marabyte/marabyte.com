@@ -12,7 +12,7 @@ tags:
 
 My first blog was hosted on bloger.com even before the Google acquisition and I was quite active back then. It wasn't tech related back then; I would write about some new film I had watched, the latest on teenage drama or just pure nonsense.
 
-### The "hand crafted"
+## The "hand crafted"
 
 As my interest on web development grew, I started to build my own website. There was a Portuguese hosting service that would allow you to host websites for free, but you couldn't run any server-side code, just serving static files.
 
@@ -27,7 +27,7 @@ I might have been a pain to Pedro, but it was extremely rewarding to see the pag
 
 The one issue with this setup was the amount of copy/pasting involved. Since I couldn't write any server-side code, for every new post I would have to be duplicate the "master template", add the new content and upload it to the new folder. Needless to say, this was a very error-prone system.
 
-### Enter WordPress
+## Enter WordPress
 
 WordPress was a game changer for me. No more writing posts on Word, copy/paste to notepad, add HTML tags and then upload to an FTP. I could write my post on the browser and with one click a new page would be created!
 
@@ -37,11 +37,11 @@ And for a very long time WordPress powered my blog. New content became infrequen
 
 I think WordPress doesn't get enough credit for how accessible the Internet became thanks to it.
 
-### Rise of complexity
+## Rise of complexity
 
 In 2014 I started to work in an AngularJS webapp and got excited with the idea of WordPress powering the content and AngularJS the frontend. We were doing something similar at work, but it involved purpose-built plugins and bash scripts, I didn't quite understand all the setup behind it and until this day I am afraid of bash scripts.
 
-###### (Buy me a pint and I'll tell you the story about bash scripts.)
+> (Buy me a pint and I'll tell you the story about bash scripts.)
 
 Luckily, towards the end of the year I went to a meetup where they demoed a REST plugin for WordPress. In my head it was an all-new world, I could do all kinds of fancy transitions between pages, everything would be cached in a CDN and the app-like behaviour... it would be magical.
 
@@ -59,7 +59,7 @@ Instead, I spent my spare time trying to put Angular on a diet. While overall I 
 
 But the bundle size was still annoying me, it was way too big. Initially it was an incentive to look at React again, but after looking at other projects the gains were not very impressive.
 
-### Less but better
+## Less but better
 
 Thanks to [Jake](https://twitter.com/jaffathecake "Jake Archibald's twitter page") and [Surma](https://twitter.com/DasSurma "Surma's twitter page") I discovered Preact. The project selling point is "Fast **3kB** alternative to React with the same modern API." and that caught my eye. It was a good opportunity to get on the JSX wagon and make some serious improvements on the site's performance.
 
