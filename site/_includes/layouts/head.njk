@@ -2,12 +2,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title or metadata.title }}</title>
-  {# <link rel="manifest" href="/manifest.json" /> #}
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/hugavatar-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/hugavatar-180x180.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/hugavatar-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/hugavatar-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png" />
+  <link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  {# Twitter metadata #}
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:creator" content="@marabyte_">
+  <meta property="twitter:url" content="{{metadata.url + page.url or metadata.url + '/' }}">
+  <meta property="twitter:title" content="{{ title or metadata.title }}">
+  <meta property="twitter:description" content="{{ summary or metadata.description }}">
+  <meta property="twitter:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}">
+  <meta property="twitter:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
   {% if templateClass === 'tmpl-post' %}
   <meta property="og:type" content="article" />
   <meta property="og:image" content="{{  metadata.url + featured_image.src + '.png' }}" />
@@ -24,22 +27,12 @@
   <meta property="og:image:height" content="640">
   <meta property="og:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
   <meta name="description" content="{{ summary or metadata.description }}">
-  {# Twitter metadata #}
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:creator" content="@marabyte_">
-  <meta property="twitter:url" content="{{metadata.url + page.url or metadata.url + '/' }}">
-  <meta property="twitter:title" content="{{ title or metadata.title }}">
-  <meta property="twitter:description" content="{{ summary or metadata.description }}">
-  <meta property="twitter:image" content="{{ metadata.url + featured_image.src + '.png' or metadata.image }}">
-  <meta property="twitter:image:alt" content="{{ featured_image.alt or metadata.imageAlt }}">
-  <link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <style>
     {% css "site/_assets/styles/tailwind.css" %}
   </style>
   <style>
     {% css "site/_assets/styles/styles.css" %}
   </style>
-
   {% if templateClass === 'tmpl-post' %}
     <script type="application/ld+json">
     {
@@ -72,4 +65,11 @@
     }
     </script>
   {% endif %}
+  {# <link rel="manifest" href="/manifest.json" /> #}
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/hugavatar-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/hugavatar-180x180.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/hugavatar-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/hugavatar-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png" />
+
 </head>
