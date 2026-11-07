@@ -1,11 +1,15 @@
 root = true
 
 [*]
-indent_style = space
+indent_style = tab
 indent_size = 2
 charset = utf-8
 trim_trailing_whitespace = false
-insert_final_newline = false
+insert_final_newline = true
 
 [*.{js,mjs,ts}]
 quote_type = single
+
+# YAML forbids tabs; tabs in Markdown can turn text into code blocks.
+[*.{md,yml,yaml}]
+indent_style = space
