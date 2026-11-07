@@ -15,9 +15,11 @@ interface Props {
 	canonicalPath?: string;
 	/** Keep the page out of search results, and give it no canonical URL (e.g. the 404 page). */
 	noindex?: boolean;
+	/** Use the site name in the header as the page's <h1> (pages with no heading of their own). */
+	siteNameAsHeading?: boolean;
 }
 
-const { title, description, post, canonicalPath, noindex = false } = Astro.props;
+const { title, description, post, canonicalPath, noindex = false, siteNameAsHeading = false } = Astro.props;
 const pageTitle = title || metadata.title;
 const pageDescription = description || metadata.description;
 const pageUrl = metadata.url + (canonicalPath ?? Astro.url.pathname);
@@ -79,7 +81,7 @@ const jsonLd = post && {
 		<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png">
 	</head>
 	<body class="min-h-screen flex flex-col">
-		<Header />
+		<Header asHeading={siteNameAsHeading} />
 		<main class="mb-20">
 			<slot />
 		</main>
