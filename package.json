@@ -8,7 +8,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro build && wrangler dev",
-    "deploy": "astro build && wrangler deploy"
+    "deploy": "astro build && wrangler deploy",
+    "check": "biome check",
+    "format": "biome check --write"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
   },
   "homepage": "https://github.com/Marabyte/marabyte.com#readme",
   "devDependencies": {
+    "@biomejs/biome": "2.6.6",
     "wrangler": "^4.158.0"
   },
   "dependencies": {

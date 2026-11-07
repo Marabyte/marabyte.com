@@ -14,7 +14,12 @@ export const GET: APIRoute = async () => {
   const posts = await getPosts();
 
   const entries: SitemapEntry[] = [
-    ...posts.map((post) => ({ path: postUrl(post), lastmod: post.data.date, priority: 0.5, changefreq: 'monthly' as const })),
+    ...posts.map((post) => ({
+      path: postUrl(post),
+      lastmod: post.data.date,
+      priority: 0.5,
+      changefreq: 'monthly' as const,
+    })),
     { path: '/about/', lastmod: builtAt, priority: 0.2, changefreq: 'monthly' },
     { path: '/', lastmod: builtAt, priority: 1, changefreq: 'weekly' },
     { path: '/posts/', lastmod: builtAt, priority: 0.8, changefreq: 'weekly' },

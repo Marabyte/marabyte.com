@@ -1,7 +1,8 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+
 import { satteri } from '@astrojs/markdown-satteri';
 import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'astro/config';
 import { externalLinks } from './src/lib/satteri-external-links.ts';
 
 export const SITE = 'https://www.marabyte.com';

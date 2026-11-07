@@ -1,8 +1,8 @@
 ---
 import { Image } from 'astro:assets';
-import Base from './Base.astro';
 import { formatDate } from '../lib/date';
 import type { Post } from '../lib/posts';
+import Base from './Base.astro';
 import '../styles/prism-tomorrow.css';
 
 interface Props {
@@ -12,6 +12,7 @@ interface Props {
 const { post } = Astro.props;
 const { title, date, summary, featured_image } = post.data;
 ---
+
 <Base title={title} description={summary} post={post}>
   <article class="article px-4 md:px-0 container mx-auto">
     <header class="mb-4">
@@ -31,73 +32,75 @@ const { title, date, summary, featured_image } = post.data;
 </Base>
 
 <style is:global>
-  /* Global because it styles the rendered Markdown inside <slot />. */
-  .article {
-    section * {
-      margin-bottom: calc(1em + 0.5vw);
-    }
+/* Global because it styles the rendered Markdown inside <slot />. */
+.article {
+  section * {
+    margin-bottom: calc(1em + 0.5vw);
+  }
 
-    a:hover {
-      text-decoration: underline;
-    }
+  a:hover {
+    text-decoration: underline;
+  }
 
-    h2 {
-      font-size: 1.5rem;
-      line-height: 1.25;
-      margin-top: 2.5em;
-      a {
-        color: var(--accent-color);
-      }
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      margin-top: 2.5em;
-    }
-
-    hr {
-      border-color: var(--accent-color);
-    }
-
-    blockquote {
-      font-size: 1rem;
-      padding-left: 1em;
-      font-style: italic;
-      border-left: 2px solid var(--accent-color);
-    }
-
-    iframe ~ figcaption {
-      font-size: 1rem;
-      text-align: center;
-      margin-top: -1em;
-    }
-
-    :not(pre) > code {
-      background: #2d2d2d;
-      color: #f8c555;
-      padding: 2px 4px;
-    }
-
-    li {
-      list-style: inside;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Tailwind v4's preflight zeroes this; v3 kept the browser default. */
-    th, td {
-      padding: 1px;
-    }
-
-    table {
-      width: 100%;
-      thead, tr:not(:last-child) {
-        border-bottom: 2px solid var(--accent-color);
-      }
-    }
-
-    .video {
-      aspect-ratio: 16/9;
-      width: 100%;
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-top: 2.5em;
+    a {
+      color: var(--accent-color);
     }
   }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 2.5em;
+  }
+
+  hr {
+    border-color: var(--accent-color);
+  }
+
+  blockquote {
+    font-size: 1rem;
+    padding-left: 1em;
+    font-style: italic;
+    border-left: 2px solid var(--accent-color);
+  }
+
+  iframe ~ figcaption {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: -1em;
+  }
+
+  :not(pre) > code {
+    background: #2d2d2d;
+    color: #f8c555;
+    padding: 2px 4px;
+  }
+
+  li {
+    list-style: inside;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Tailwind v4's preflight zeroes this; v3 kept the browser default. */
+  th,
+  td {
+    padding: 1px;
+  }
+
+  table {
+    width: 100%;
+    thead,
+    tr:not(:last-child) {
+      border-bottom: 2px solid var(--accent-color);
+    }
+  }
+
+  .video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+  }
+}
 </style>

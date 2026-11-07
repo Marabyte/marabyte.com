@@ -1,6 +1,6 @@
 ---
 import { getImage } from 'astro:assets';
-import { postUrl, type Post } from '../lib/posts';
+import { type Post, postUrl } from '../lib/posts';
 
 interface Props {
   post: Post;
@@ -12,6 +12,7 @@ const { post, index } = Astro.props;
 const gridType = index === 1 ? 'sm:col-span-2' : 'col-span-1';
 const background = await getImage({ src: post.data.featured_image.src });
 ---
+
 <article
   class:list={['postcard h-[100vw] sm:h-[50vw] lg:h-[calc(100vw/3)] xxl:h-[20vw] bg-cover p-8', gridType]}
   style={`background-image:url(${background.src})`}

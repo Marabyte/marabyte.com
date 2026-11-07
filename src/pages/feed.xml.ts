@@ -1,6 +1,6 @@
+import { render } from 'astro:content';
 import type { APIRoute } from 'astro';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
-import { render } from 'astro:content';
 import { getPosts, postUrl } from '../lib/posts';
 import { metadata } from '../lib/site';
 import { absolutizeUrls, escapeXml, feedDate } from '../lib/xml';
