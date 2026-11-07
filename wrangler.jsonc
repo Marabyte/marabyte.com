@@ -8,5 +8,6 @@
     // /about -> /about/ (folder index files are served with a trailing slash).
     "html_handling": "auto-trailing-slash",
     "not_found_handling": "none"
-  }
+  },
+  "previews": {}
 }
