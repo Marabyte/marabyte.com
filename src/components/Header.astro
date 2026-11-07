@@ -1,11 +1,19 @@
 ---
 import { metadata } from '../lib/site';
+
+interface Props {
+	/** Make the site name the page's <h1>, for pages with no heading of their own (the post grid). */
+	asHeading?: boolean;
+}
+
+const { asHeading = false } = Astro.props;
+const SiteName = asHeading ? 'h1' : 'p';
 ---
 
 <header class="header flex container mx-auto items-center justify-between p-4">
-	<h3>
+	<SiteName class="site-name">
 		<a href="/">{metadata.title}</a>
-	</h3>
+	</SiteName>
 	<nav>
 		<ul class="flex items-center">
 			<li><a href="/about/">About</a></li>
@@ -14,6 +22,10 @@ import { metadata } from '../lib/site';
 </header>
 
 <style>
+.site-name {
+	font-family: Fira, ui-monospace, monospace;
+}
+
 .header {
 	li {
 		margin: 0 10px;
