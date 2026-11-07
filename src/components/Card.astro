@@ -1,5 +1,5 @@
 ---
-import { getImage } from 'astro:assets';
+import { Image } from 'astro:assets';
 import { type Post, postUrl } from '../lib/posts';
 
 interface Props {
@@ -9,15 +9,18 @@ interface Props {
 }
 
 const { post, index } = Astro.props;
-const gridType = index === 1 ? 'sm:col-span-2' : 'col-span-1';
-const background = await getImage({ src: post.data.featured_image.src });
+const isFirst = index === 1;
 ---
 
-<article
-	class:list={['postcard h-[100vw] sm:h-[50vw] lg:h-[calc(100vw/3)] xxl:h-[20vw] bg-cover p-8', gridType]}
-	style={`background-image:url(${background.src})`}
->
-	<a class="flex flex-col justify-center h-full" href={postUrl(post)}>
+<article class:list={['postcard relative flex flex-col aspect-square p-8', isFirst && 'sm:col-span-2 sm:aspect-[2/1]']}>
+	{/* Decorative: the card's name comes from the title. object-left-top keeps the old background-image crop. */}
+	<Image
+		class="absolute inset-0 size-full object-cover object-left-top"
+		src={post.data.featured_image.src}
+		alt=""
+		priority={isFirst}
+	/>
+	<a class="relative flex flex-1 flex-col justify-center" href={postUrl(post)}>
 		<h2 class="font-bold sm:text-3xl text-2xl mt-auto antialiased">{post.data.title}</h2>
 	</a>
 </article>

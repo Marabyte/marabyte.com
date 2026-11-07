@@ -6,7 +6,7 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["**", "!!**/dist", "!**/*.svg", "!src/styles/prism-tomorrow.css"]
+		"includes": ["**", "!!**/dist", "!**/*.svg"]
 	},
 	"formatter": {
 		"enabled": true,

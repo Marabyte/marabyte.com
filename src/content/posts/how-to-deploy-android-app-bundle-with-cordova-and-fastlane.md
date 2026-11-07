@@ -6,7 +6,7 @@ featured_image:
   alt: ''
   caption: A geometrized version of a photo by Avinash Kumar on Unsplash
   src: ../../assets/uploads/leaves_avinash_kumar.svg
-  social: /uploads/leaves_avinash_kumar.svg.png
+  social: ../../assets/uploads/leaves_avinash_kumar.svg.png
 summary: With just a small change in your current Fastlane and Cordova setup you can deploy smaller apps on Google's Play Store
 tags:
 - cordova

@@ -3,7 +3,6 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import type { Post } from '../lib/posts';
-import { publicImageSize } from '../lib/public-image';
 import { metadata } from '../lib/site';
 
 interface Props {
@@ -22,10 +21,10 @@ interface Props {
 const { title, description, post, canonicalPath, noindex = false, siteNameAsHeading = false } = Astro.props;
 const pageTitle = title || metadata.title;
 const pageDescription = description || metadata.description;
-const pageUrl = metadata.url + (canonicalPath ?? Astro.url.pathname);
-const imagePath = post?.data.featured_image.social ?? metadata.image;
-const image = metadata.url + imagePath;
-const imageSize = await publicImageSize(imagePath);
+const absolute = (path: string) => new URL(path, Astro.site).href;
+const pageUrl = absolute(canonicalPath ?? Astro.url.pathname);
+const socialImage = post?.data.featured_image.social ?? metadata.image;
+const image = absolute(socialImage.src);
 const imageAlt = post?.data.featured_image.alt || metadata.imageAlt;
 
 const jsonLd = post && {
@@ -36,11 +35,11 @@ const jsonLd = post && {
 	image: [image],
 	datePublished: post.data.date.toISOString(),
 	dateModified: post.data.date.toISOString(),
-	author: { '@type': 'Person', name: 'Hugo Nogueira', url: 'https://www.marabyte.com/about/' },
+	author: { '@type': 'Person', name: 'Hugo Nogueira', url: absolute('/about/') },
 	publisher: {
 		'@type': 'Organization',
 		name: 'Marabyte',
-		logo: { '@type': 'ImageObject', url: metadata.url + metadata.image },
+		logo: { '@type': 'ImageObject', url: absolute(metadata.image.src) },
 	},
 	description: post.data.summary,
 };
@@ -51,25 +50,27 @@ const jsonLd = post && {
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="color-scheme" content="dark">
+		<meta name="theme-color" content="#222429">
 		<title>{pageTitle}</title>
 		{noindex ? <meta name="robots" content="noindex"> : <link rel="canonical" href={pageUrl}>}
 		<link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="alternate" type="application/atom+xml" title={metadata.title} href="/feed.xml">
-		<meta property="twitter:card" content="summary_large_image">
-		<meta property="twitter:creator" content="@marabyte_">
-		{!noindex && <meta property="twitter:url" content={pageUrl}>}
-		<meta property="twitter:title" content={pageTitle}>
-		<meta property="twitter:description" content={pageDescription}>
-		<meta property="twitter:image" content={image}>
-		<meta property="twitter:image:alt" content={imageAlt}>
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:creator" content="@marabyte_">
+		{!noindex && <meta name="twitter:url" content={pageUrl}>}
+		<meta name="twitter:title" content={pageTitle}>
+		<meta name="twitter:description" content={pageDescription}>
+		<meta name="twitter:image" content={image}>
+		<meta name="twitter:image:alt" content={imageAlt}>
 		<meta property="og:type" content={post ? 'article' : 'website'}>
 		<meta property="og:image" content={image}>
 		<meta property="og:title" content={pageTitle}>
 		<meta property="og:description" content={pageDescription}>
 		{!noindex && <meta property="og:url" content={pageUrl}>}
 		<meta property="og:site_name" content="Home of the Marabyte">
-		<meta property="og:image:width" content={imageSize.width}>
-		<meta property="og:image:height" content={imageSize.height}>
+		<meta property="og:image:width" content={socialImage.width}>
+		<meta property="og:image:height" content={socialImage.height}>
 		<meta property="og:image:alt" content={imageAlt}>
 		<meta name="description" content={pageDescription}>
 		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}

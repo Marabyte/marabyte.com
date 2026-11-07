@@ -8,7 +8,7 @@ featured_image:
     night time
   caption: Photo by Vincentiu Solomon on Unsplash
   src: ../../assets/uploads/vincentiu-solomon-ln5drpv_imi-unsplash.svg
-  social: /uploads/vincentiu-solomon-ln5drpv_imi-unsplash.svg.png
+  social: ../../assets/uploads/vincentiu-solomon-ln5drpv_imi-unsplash.svg.png
 summary:
   One of the great challenges in coding is naming stuff. And by stuff, I mean all the
   stuff. And I'm not alone.
