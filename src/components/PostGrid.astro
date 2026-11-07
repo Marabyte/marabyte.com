@@ -1,0 +1,9 @@
+---
+import Card from './Card.astro';
+import { getPosts } from '../lib/posts';
+
+const posts = (await getPosts()).reverse();
+---
+<section class="mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-5">
+  {posts.map((post, i) => <Card post={post} index={i + 1} />)}
+</section>
