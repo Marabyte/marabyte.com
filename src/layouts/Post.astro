@@ -17,7 +17,7 @@ const { title, date, summary, featured_image } = post.data;
 	<article class="article px-4 md:px-0 container mx-auto">
 		<header class="mb-4">
 			<figure>
-				<Image class="object-cover h-64 w-full" src={featured_image.src} alt={featured_image.alt ?? ''} />
+				<Image class="object-cover h-64 w-full" src={featured_image.src} alt={featured_image.alt ?? ''} priority />
 				{featured_image.caption && (
 					<figcaption class="mx-auto max-w-3xl text-xs pt-2" set:html={featured_image.caption} />
 				)}

@@ -22,7 +22,6 @@ export const GET: APIRoute = async () => {
 		})),
 		{ path: '/about/', lastmod: builtAt, priority: 0.2, changefreq: 'monthly' },
 		{ path: '/', lastmod: builtAt, priority: 1, changefreq: 'weekly' },
-		{ path: '/posts/', lastmod: builtAt, priority: 0.8, changefreq: 'weekly' },
 	];
 
 	const urls = entries
