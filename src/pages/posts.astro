@@ -1,8 +1,10 @@
 ---
 import PostGrid from '../components/PostGrid.astro';
 import Base from '../layouts/Base.astro';
+
+// Same grid as the home page, so its canonical URL points there (and it's left out of the sitemap).
 ---
 
-<Base>
+<Base canonicalPath="/">
 	<PostGrid />
 </Base>

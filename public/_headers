@@ -1,0 +1,14 @@
+# Cloudflare static assets: https://developers.cloudflare.com/workers/static-assets/headers/
+# HSTS starts with a short max-age on purpose: raise it (e.g. to 31536000) once HTTPS is confirmed solid.
+# Hashed /_astro/ build output never changes, so browsers can cache it for a year.
+
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'none'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; frame-src https://player.vimeo.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Strict-Transport-Security: max-age=300
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable

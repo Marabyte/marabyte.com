@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import type { Post } from '../lib/posts';
+import { publicImageSize } from '../lib/public-image';
 import { metadata } from '../lib/site';
 
 interface Props {
@@ -10,14 +11,19 @@ interface Props {
 	description?: string;
 	/** Set on blog posts: switches og:type to article and adds BlogPosting JSON-LD. */
 	post?: Post;
+	/** Path of the page this one duplicates, e.g. '/' for /posts/. Defaults to the current path. */
+	canonicalPath?: string;
+	/** Keep the page out of search results, and give it no canonical URL (e.g. the 404 page). */
+	noindex?: boolean;
 }
 
-const { title, description, post } = Astro.props;
+const { title, description, post, canonicalPath, noindex = false } = Astro.props;
 const pageTitle = title || metadata.title;
 const pageDescription = description || metadata.description;
-const pageUrl = metadata.url + Astro.url.pathname;
-const social = post?.data.featured_image.social;
-const image = social ? metadata.url + social : metadata.image;
+const pageUrl = metadata.url + (canonicalPath ?? Astro.url.pathname);
+const imagePath = post?.data.featured_image.social ?? metadata.image;
+const image = metadata.url + imagePath;
+const imageSize = await publicImageSize(imagePath);
 const imageAlt = post?.data.featured_image.alt || metadata.imageAlt;
 
 const jsonLd = post && {
@@ -32,7 +38,7 @@ const jsonLd = post && {
 	publisher: {
 		'@type': 'Organization',
 		name: 'Marabyte',
-		logo: { '@type': 'ImageObject', url: metadata.image },
+		logo: { '@type': 'ImageObject', url: metadata.url + metadata.image },
 	},
 	description: post.data.summary,
 };
@@ -44,10 +50,12 @@ const jsonLd = post && {
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>{pageTitle}</title>
+		{noindex ? <meta name="robots" content="noindex"> : <link rel="canonical" href={pageUrl}>}
 		<link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="alternate" type="application/atom+xml" title={metadata.title} href="/feed.xml">
 		<meta property="twitter:card" content="summary_large_image">
 		<meta property="twitter:creator" content="@marabyte_">
-		<meta property="twitter:url" content={pageUrl}>
+		{!noindex && <meta property="twitter:url" content={pageUrl}>}
 		<meta property="twitter:title" content={pageTitle}>
 		<meta property="twitter:description" content={pageDescription}>
 		<meta property="twitter:image" content={image}>
@@ -56,15 +64,16 @@ const jsonLd = post && {
 		<meta property="og:image" content={image}>
 		<meta property="og:title" content={pageTitle}>
 		<meta property="og:description" content={pageDescription}>
-		<meta property="og:url" content={pageUrl}>
+		{!noindex && <meta property="og:url" content={pageUrl}>}
 		<meta property="og:site_name" content="Home of the Marabyte">
-		<meta property="og:image:width" content="1280">
-		<meta property="og:image:height" content="640">
+		<meta property="og:image:width" content={imageSize.width}>
+		<meta property="og:image:height" content={imageSize.height}>
 		<meta property="og:image:alt" content={imageAlt}>
 		<meta name="description" content={pageDescription}>
 		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/hugavatar-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/hugavatar-180x180.png">
+		{/* hugavatar-180x180.png is really 280×280, so the sizes below follow the file, not its name. */}
+		<link rel="apple-touch-icon" href="/assets/icons/hugavatar-180x180.png">
+		<link rel="icon" type="image/png" sizes="280x280" href="/assets/icons/hugavatar-180x180.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/hugavatar-16x16.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/hugavatar-32x32.png">
 		<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png">
