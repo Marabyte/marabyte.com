@@ -17,4 +17,4 @@ Posts live in `src/content/posts/*.md`. The `slug` frontmatter field sets the UR
 
 ## Deploy
 
-Pushes to `master` deploy through Cloudflare's Git integration (`npm run build`, then `npx wrangler deploy`). Redirects live in `public/_redirects`.
+Pushes to `main` deploy through Cloudflare's Git integration (`npm run build`, then `npx wrangler deploy`). Redirects live in `public/_redirects`.

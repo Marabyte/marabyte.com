@@ -8,8 +8,7 @@ featured_image:
   src: ../../assets/uploads/breaking-dawn.svg
   social: /uploads/breaking-dawn.svg.png
 summary: A reflection on the tech evolution of my personal website.
-tags:
-  - post
+tags: []
 ---
 I've been having a blog on and off for quite some time now.
 

@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/Marabyte/marabyte.com#readme",
   "devDependencies": {
-    "prettier": "^1.18.2",
     "wrangler": "^4.158.0"
   },
   "dependencies": {
