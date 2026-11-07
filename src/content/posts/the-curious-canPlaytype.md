@@ -2,7 +2,6 @@
 slug: 'the-curious-canplaytype()'
 title: The curious CanPlayType()
 date: 2020-02-27T16:07:10.000+00:00
-code: true
 featured_image:
   alt:
     A vector geometric representation of a silhouette photo of mountain during
@@ -14,7 +13,6 @@ summary:
   One of the great challenges in coding is naming stuff. And by stuff, I mean all the
   stuff. And I'm not alone.
 tags:
-  - post
   - javascript
 ---
 

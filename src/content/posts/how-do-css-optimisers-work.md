@@ -2,7 +2,6 @@
 slug: 'how-do-css-optimisers-work'
 title: How do CSS optimisers work?
 date: 2020-10-02T13:00:00+01:00
-code: true
 featured_image:
   alt: A vector geometric representation of a man throwing a fishing net
   caption: A geometrized version of a photo by Lahiru Iddamalgoda on Unsplash
@@ -13,7 +12,6 @@ tags:
   - 11ty
   - css
   - performance
-  - post
 
 ---
 If you're working on a project that uses [react cli](https://create-react-app.dev/), [vue cli](https://cli.vuejs.org/), [angular cli](https://cli.angular.io/), or any other kind of tool that provides an out of the box full development experience, you most likely have a code optimisation step in your workflow where code is cleverly removed from the final CSS or JavaScript bundle file(s).

@@ -2,7 +2,6 @@
 slug: 'how-to-deploy-android-app-bundle'
 title: How to deploy Android App Bundle
 date: 2020-05-17T16:54:06.154+00:00
-code: true
 featured_image:
   alt: ''
   caption: A geometrized version of a photo by Avinash Kumar on Unsplash
@@ -13,7 +12,6 @@ tags:
 - cordova
 - fastlane
 - android
-- post
 
 ---
 If you have an app on Google's Play Store you may have seen this warning on Google Play Console.
