@@ -6,23 +6,23 @@ import { metadata } from '../lib/site';
 import { absolutizeUrls, escapeXml, feedDate } from '../lib/xml';
 
 const feed = {
-  title: "Welcome to Hugo Nogueira's online experience!",
-  subtitle: 'I am writing about my experiences as a naval navel-gazer.',
-  url: `${metadata.url}/feed.xml`,
-  home: `${metadata.url}/`,
-  author: 'Hugo Nogueira',
+	title: "Welcome to Hugo Nogueira's online experience!",
+	subtitle: 'I am writing about my experiences as a naval navel-gazer.',
+	url: `${metadata.url}/feed.xml`,
+	home: `${metadata.url}/`,
+	author: 'Hugo Nogueira',
 };
 
 export const GET: APIRoute = async () => {
-  const posts = await getPosts();
-  const container = await AstroContainer.create();
+	const posts = await getPosts();
+	const container = await AstroContainer.create();
 
-  const entries = await Promise.all(
-    posts.map(async (post) => {
-      const url = metadata.url + postUrl(post);
-      const { Content } = await render(post);
-      const html = absolutizeUrls(await container.renderToString(Content), url);
-      return `
+	const entries = await Promise.all(
+		posts.map(async (post) => {
+			const url = metadata.url + postUrl(post);
+			const { Content } = await render(post);
+			const html = absolutizeUrls(await container.renderToString(Content), url);
+			return `
   <entry>
     <title>${escapeXml(post.data.title)}</title>
     <link href="${url}"/>
@@ -30,11 +30,11 @@ export const GET: APIRoute = async () => {
     <id>${url}</id>
     <content type="html">${escapeXml(html)}</content>
   </entry>`;
-    }),
-  );
+		}),
+	);
 
-  const updated = posts.at(-1)?.data.date ?? new Date();
-  const body = `<?xml version="1.0" encoding="utf-8"?>
+	const updated = posts.at(-1)?.data.date ?? new Date();
+	const body = `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>${escapeXml(feed.title)}</title>
   <subtitle>${escapeXml(feed.subtitle)}</subtitle>
@@ -48,5 +48,5 @@ export const GET: APIRoute = async () => {
 </feed>
 `;
 
-  return new Response(body, { headers: { 'Content-Type': 'application/atom+xml; charset=utf-8' } });
+	return new Response(body, { headers: { 'Content-Type': 'application/atom+xml; charset=utf-8' } });
 };

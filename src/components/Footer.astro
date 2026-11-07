@@ -4,25 +4,25 @@ import Twitter from './icons/Twitter.astro';
 ---
 
 <footer class="footer container mx-auto mt-auto p-4 flex flex-col-reverse md:flex-row items-center">
-  <small class="md:mr-auto">
-    Marabyte | Built with
-    <a href="https://astro.build/" target="_blank" rel="noreferrer">Astro</a>
-    and hosted on
-    <a href="https://www.cloudflare.com/" target="_blank" rel="noreferrer">Cloudflare</a>
-  </small>
-  <div class="flex mb-4 md:mb-0">
-    <a class="ml-4" href="https://github.com/Marabyte" target="_blank" rel="noreferrer">
-      <Github />
-    </a>
-    <a class="ml-4" href="https://twitter.com/marabyte_" target="_blank" rel="noreferrer">
-      <Twitter />
-    </a>
-  </div>
+	<small class="md:mr-auto">
+		Marabyte | Built with
+		<a href="https://astro.build/" target="_blank" rel="noreferrer">Astro</a>
+		and hosted on
+		<a href="https://www.cloudflare.com/" target="_blank" rel="noreferrer">Cloudflare</a>
+	</small>
+	<div class="flex mb-4 md:mb-0">
+		<a class="ml-4" href="https://github.com/Marabyte" target="_blank" rel="noreferrer">
+			<Github />
+		</a>
+		<a class="ml-4" href="https://twitter.com/marabyte_" target="_blank" rel="noreferrer">
+			<Twitter />
+		</a>
+	</div>
 </footer>
 
 <style>
 /* The SVGs live in child icon components, so they need :global(). */
 .footer :global(svg) {
-  height: 24px;
+	height: 24px;
 }
 </style>

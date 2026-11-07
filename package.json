@@ -1,44 +1,44 @@
 {
-  "name": "marabyte",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Home of the Marabyte",
-  "type": "module",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro build && wrangler dev",
-    "deploy": "astro build && wrangler deploy",
-    "check": "biome check",
-    "format": "biome check --write"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Marabyte/marabyte.com.git"
-  },
-  "keywords": [
-    "astro",
-    "cloudflare",
-    "blog"
-  ],
-  "author": "Hugo Nogueira",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Marabyte/marabyte.com/issues"
-  },
-  "homepage": "https://github.com/Marabyte/marabyte.com#readme",
-  "devDependencies": {
-    "@biomejs/biome": "2.6.6",
-    "wrangler": "^4.158.0"
-  },
-  "dependencies": {
-    "@astrojs/markdown-satteri": "^0.4.7",
-    "@tailwindcss/vite": "^4.3.5",
-    "astro": "^7.4.7",
-    "tailwindcss": "^4.3.5"
-  },
-  "allowScripts": {
-    "esbuild": true,
-    "workerd": true
-  }
+	"name": "marabyte",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Home of the Marabyte",
+	"type": "module",
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"preview": "astro build && wrangler dev",
+		"deploy": "astro build && wrangler deploy",
+		"check": "biome check",
+		"format": "biome check --write"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Marabyte/marabyte.com.git"
+	},
+	"keywords": [
+		"astro",
+		"cloudflare",
+		"blog"
+	],
+	"author": "Hugo Nogueira",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Marabyte/marabyte.com/issues"
+	},
+	"homepage": "https://github.com/Marabyte/marabyte.com#readme",
+	"devDependencies": {
+		"@biomejs/biome": "2.6.6",
+		"wrangler": "^4.158.0"
+	},
+	"dependencies": {
+		"@astrojs/markdown-satteri": "^0.4.7",
+		"@tailwindcss/vite": "^4.3.5",
+		"astro": "^7.4.7",
+		"tailwindcss": "^4.3.5"
+	},
+	"allowScripts": {
+		"esbuild": true,
+		"workerd": true
+	}
 }

@@ -6,10 +6,10 @@ import type { Post } from '../lib/posts';
 import { metadata } from '../lib/site';
 
 interface Props {
-  title?: string;
-  description?: string;
-  /** Set on blog posts: switches og:type to article and adds BlogPosting JSON-LD. */
-  post?: Post;
+	title?: string;
+	description?: string;
+	/** Set on blog posts: switches og:type to article and adds BlogPosting JSON-LD. */
+	post?: Post;
 }
 
 const { title, description, post } = Astro.props;
@@ -21,59 +21,59 @@ const image = social ? metadata.url + social : metadata.image;
 const imageAlt = post?.data.featured_image.alt || metadata.imageAlt;
 
 const jsonLd = post && {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
-  headline: post.data.title,
-  image: [image],
-  datePublished: post.data.date.toISOString(),
-  dateModified: post.data.date.toISOString(),
-  author: { '@type': 'Person', name: 'Hugo Nogueira', url: 'https://www.marabyte.com/about/' },
-  publisher: {
-    '@type': 'Organization',
-    name: 'Marabyte',
-    logo: { '@type': 'ImageObject', url: metadata.image },
-  },
-  description: post.data.summary,
+	'@context': 'https://schema.org',
+	'@type': 'BlogPosting',
+	mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+	headline: post.data.title,
+	image: [image],
+	datePublished: post.data.date.toISOString(),
+	dateModified: post.data.date.toISOString(),
+	author: { '@type': 'Person', name: 'Hugo Nogueira', url: 'https://www.marabyte.com/about/' },
+	publisher: {
+		'@type': 'Organization',
+		name: 'Marabyte',
+		logo: { '@type': 'ImageObject', url: metadata.image },
+	},
+	description: post.data.summary,
 };
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{pageTitle}</title>
-    <link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:creator" content="@marabyte_">
-    <meta property="twitter:url" content={pageUrl}>
-    <meta property="twitter:title" content={pageTitle}>
-    <meta property="twitter:description" content={pageDescription}>
-    <meta property="twitter:image" content={image}>
-    <meta property="twitter:image:alt" content={imageAlt}>
-    <meta property="og:type" content={post ? 'article' : 'website'}>
-    <meta property="og:image" content={image}>
-    <meta property="og:title" content={pageTitle}>
-    <meta property="og:description" content={pageDescription}>
-    <meta property="og:url" content={pageUrl}>
-    <meta property="og:site_name" content="Home of the Marabyte">
-    <meta property="og:image:width" content="1280">
-    <meta property="og:image:height" content="640">
-    <meta property="og:image:alt" content={imageAlt}>
-    <meta name="description" content={pageDescription}>
-    {jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/hugavatar-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/hugavatar-180x180.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/hugavatar-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/hugavatar-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png">
-  </head>
-  <body class="min-h-screen flex flex-col">
-    <Header />
-    <main class="mb-20">
-      <slot />
-    </main>
-    <Footer />
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{pageTitle}</title>
+		<link rel="preload" href="/assets/fonts/FiraMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:creator" content="@marabyte_">
+		<meta property="twitter:url" content={pageUrl}>
+		<meta property="twitter:title" content={pageTitle}>
+		<meta property="twitter:description" content={pageDescription}>
+		<meta property="twitter:image" content={image}>
+		<meta property="twitter:image:alt" content={imageAlt}>
+		<meta property="og:type" content={post ? 'article' : 'website'}>
+		<meta property="og:image" content={image}>
+		<meta property="og:title" content={pageTitle}>
+		<meta property="og:description" content={pageDescription}>
+		<meta property="og:url" content={pageUrl}>
+		<meta property="og:site_name" content="Home of the Marabyte">
+		<meta property="og:image:width" content="1280">
+		<meta property="og:image:height" content="640">
+		<meta property="og:image:alt" content={imageAlt}>
+		<meta name="description" content={pageDescription}>
+		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/hugavatar-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/hugavatar-180x180.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/hugavatar-16x16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/hugavatar-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/hugavatar-96x96.png">
+	</head>
+	<body class="min-h-screen flex flex-col">
+		<Header />
+		<main class="mb-20">
+			<slot />
+		</main>
+		<Footer />
+	</body>
 </html>

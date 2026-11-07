@@ -1,13 +1,13 @@
 {
-  "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "marabyte",
-  "compatibility_date": "2026-11-07",
-  // Static site only: no Worker script, Cloudflare serves ./dist directly.
-  "assets": {
-    "directory": "./dist",
-    // /about -> /about/ (folder index files are served with a trailing slash).
-    "html_handling": "auto-trailing-slash",
-    "not_found_handling": "none"
-  },
-  "previews": {}
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "marabyte",
+	"compatibility_date": "2026-11-07",
+	// Static site only: no Worker script, Cloudflare serves ./dist directly.
+	"assets": {
+		"directory": "./dist",
+		// /about -> /about/ (folder index files are served with a trailing slash).
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "none"
+	},
+	"previews": {}
 }
