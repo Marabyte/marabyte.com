@@ -1,22 +1,23 @@
 {
   "name": "marabyte",
   "version": "1.0.0",
+  "private": true,
   "description": "Home of the Marabyte",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "build": "ELEVENTY_ENV=production npx @11ty/eleventy --input=site",
-    "start": "ELEVENTY_ENV=development npx @11ty/eleventy --input=site --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && wrangler dev",
+    "deploy": "astro build && wrangler deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Marabyte/marabyte.com.git"
   },
   "keywords": [
-    "JAM",
-    "Stack",
-    "11ty",
-    "netlify"
+    "astro",
+    "cloudflare",
+    "blog"
   ],
   "author": "Hugo Nogueira",
   "license": "MIT",
@@ -25,17 +26,17 @@
   },
   "homepage": "https://github.com/Marabyte/marabyte.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
-    "@11ty/eleventy-plugin-rss": "^1.0.7",
-    "@sardine/eleventy-plugin-code-highlighter": "^1.2.0",
-    "@sardine/eleventy-plugin-external-links": "^1.4.0",
-    "@sardine/eleventy-plugin-image-optimiser": "^1.2.0",
-    "@sardine/eleventy-plugin-tinycss": "^1.6.0",
-    "@sardine/eleventy-plugin-tinyhtml": "^0.1.0",
-    "autoprefixer": "^10.2.6",
-    "markdown-it-anchor": "^8.4.1",
-    "postcss": "^8.3.5",
     "prettier": "^1.18.2",
-    "tailwindcss": "^3.0.13"
+    "wrangler": "^4.158.0"
+  },
+  "dependencies": {
+    "@astrojs/markdown-satteri": "^0.4.7",
+    "@tailwindcss/vite": "^4.3.5",
+    "astro": "^7.4.7",
+    "tailwindcss": "^4.3.5"
+  },
+  "allowScripts": {
+    "esbuild": true,
+    "workerd": true
   }
 }

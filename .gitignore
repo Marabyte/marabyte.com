@@ -60,7 +60,11 @@ typings/
 # next.js build output
 .next
 
-# 11ty output
-_site
-.cache
+# Astro / Cloudflare
+dist/
+.astro/
+.wrangler/
 
+
+# Lighthouse CI reports
+.lighthouseci/

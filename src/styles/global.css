@@ -1,0 +1,51 @@
+/* Only scan templates (like the old v3 `content` config), not Markdown prose. */
+@import "tailwindcss" source(none);
+@source "../components";
+@source "../layouts";
+@source "../pages";
+
+@theme {
+  /* 1480px. Must be in rem like the default breakpoints, or Tailwind sorts it first. */
+  --breakpoint-xxl: 92.5rem;
+  /* Tailwind v3's default stack, which the site was designed with. */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/** GLOBAL CSS **/
+
+@font-face {
+  font-family: Fira;
+  src: url(/assets/fonts/FiraMono-Regular.woff2) format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --accent-color: #e2127d;
+  --base-color: #ffffff;
+  --links-color: #41c7c7;
+  --primary-color: #222429;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--base-color);
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Fira;
+  color: var(--accent-color);
+}
+
+a,
+a:active,
+a:focus,
+a:link,
+a:visited {
+  color: var(--links-color);
+}
