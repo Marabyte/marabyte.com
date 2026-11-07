@@ -15,7 +15,7 @@ const SiteName = asHeading ? 'h1' : 'p';
 		<a href="/">{metadata.title}</a>
 	</SiteName>
 	<nav>
-		<ul class="flex items-center">
+		<ul class="flex items-center gap-5">
 			<li><a href="/about/">About</a></li>
 		</ul>
 	</nav>
@@ -24,17 +24,7 @@ const SiteName = asHeading ? 'h1' : 'p';
 <style>
 .site-name {
 	font-family: Fira, ui-monospace, monospace;
-}
-
-.header {
-	li {
-		margin: 0 10px;
-		&:first-child {
-			margin-left: 0;
-		}
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+	/* Fira Mono's x-height; see the heading rule in global.css. */
+	font-size-adjust: 0.527;
 }
 </style>

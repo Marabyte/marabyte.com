@@ -1,6 +1,5 @@
 import type { APIRoute } from 'astro';
 import { getPosts, postUrl } from '../lib/posts';
-import { metadata } from '../lib/site';
 
 interface SitemapEntry {
 	path: string;
@@ -9,7 +8,7 @@ interface SitemapEntry {
 	changefreq: 'weekly' | 'monthly';
 }
 
-export const GET: APIRoute = async () => {
+export const GET: APIRoute = async ({ site }) => {
 	const builtAt = new Date();
 	const posts = await getPosts();
 
@@ -28,7 +27,7 @@ export const GET: APIRoute = async () => {
 		.map(
 			(e) => `
   <url>
-    <loc>${metadata.url}${e.path}</loc>
+    <loc>${new URL(e.path, site).href}</loc>
     <lastmod>${e.lastmod.toISOString()}</lastmod>
     <priority>${e.priority}</priority>
     <changefreq>${e.changefreq}</changefreq>

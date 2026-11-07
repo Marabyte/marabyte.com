@@ -6,7 +6,7 @@ featured_image:
   alt: A vector geometric representation of the breaking dawn
   caption: Photo by Aperture Vintage on Unsplash
   src: ../../assets/uploads/breaking-dawn.svg
-  social: /uploads/breaking-dawn.svg.png
+  social: ../../assets/uploads/breaking-dawn.svg.png
 summary: A reflection on the tech evolution of my personal website.
 tags: []
 ---

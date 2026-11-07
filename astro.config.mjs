@@ -18,8 +18,8 @@ export default defineConfig({
 		inlineStylesheets: 'always',
 	},
 	markdown: {
-		// Fences without a language stay plain <pre><code> (no Prism theme styling), as before.
-		syntaxHighlight: { type: 'prism', excludeLangs: ['plaintext'] },
+		// Fences without a language stay plain <pre><code> (no theme styling), as before.
+		syntaxHighlight: { type: 'shiki', excludeLangs: ['plaintext'] },
 		processor: satteri({
 			hastPlugins: [externalLinks({ siteHost: new URL(SITE).host })],
 			// markdown-it ran with typographer off: keep straight quotes/dashes as written.
