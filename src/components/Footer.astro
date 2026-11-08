@@ -1,6 +1,6 @@
 ---
+import Bluesky from './icons/Bluesky.astro';
 import Github from './icons/Github.astro';
-import Twitter from './icons/Twitter.astro';
 ---
 
 <footer class="footer container mx-auto mt-auto p-4 flex flex-col-reverse md:flex-row items-center">
@@ -14,8 +14,14 @@ import Twitter from './icons/Twitter.astro';
 		<a class="ml-4" href="https://github.com/Marabyte" target="_blank" rel="noreferrer" aria-label="Hugo on GitHub">
 			<Github />
 		</a>
-		<a class="ml-4" href="https://twitter.com/marabyte_" target="_blank" rel="noreferrer" aria-label="Hugo on Twitter">
-			<Twitter />
+		<a
+			class="ml-4"
+			href="https://bsky.app/profile/marabyte.com"
+			target="_blank"
+			rel="noreferrer me"
+			aria-label="Hugo on Bluesky"
+		>
+			<Bluesky />
 		</a>
 	</div>
 </footer>

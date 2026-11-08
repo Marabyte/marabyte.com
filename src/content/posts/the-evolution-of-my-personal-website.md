@@ -63,7 +63,7 @@ But the bundle size was still annoying me, it was way too big. Initially it was 
 
 ## Less but better
 
-Thanks to [Jake](https://twitter.com/jaffathecake "Jake Archibald's twitter page") and [Surma](https://twitter.com/DasSurma "Surma's twitter page") I discovered Preact. The project selling point is "Fast **3kB** alternative to React with the same modern API." and that caught my eye. It was a good opportunity to get on the JSX wagon and make some serious improvements on the site's performance.
+Thanks to [Jake](https://jakearchibald.com/ "Jake Archibald's website") and [Surma](https://surma.dev/ "Surma's website") I discovered Preact. The project selling point is "Fast **3kB** alternative to React with the same modern API." and that caught my eye. It was a good opportunity to get on the JSX wagon and make some serious improvements on the site's performance.
 
 I must admit, I'm not a huge fan of JSX. Angular's and Vue's approach feels more natural to me, having a bit of JavaScript on my HTML seems more natural than having a bit of HTML and CSS on my JavaScript. But I also don't dislike it, JSX also has its merits so I guess I'm neutral about it.
 
