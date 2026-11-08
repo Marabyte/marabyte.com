@@ -14,8 +14,6 @@ const posts = defineCollection({
 				src: image(),
 				alt: z.string().optional(),
 				caption: z.string().optional(),
-				// Pre-rendered PNG used for the og:image social card. Relative path, checked at build time.
-				social: image().optional(),
 			}),
 			summary: z.string(),
 			tags: z.array(z.string()).optional(),

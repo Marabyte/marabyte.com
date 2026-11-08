@@ -1,4 +1,5 @@
 ---
+import { getImage } from 'astro:assets';
 import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -23,7 +24,9 @@ const pageTitle = title || metadata.title;
 const pageDescription = description || metadata.description;
 const absolute = (path: string) => new URL(path, Astro.site).href;
 const pageUrl = absolute(canonicalPath ?? Astro.url.pathname);
-const socialImage = post?.data.featured_image.social ?? metadata.image;
+// Social networks don't render SVG, so posts get a PNG of their featured image, rendered at build time.
+const socialImage = post ? await getImage({ src: post.data.featured_image.src, format: 'png' }) : metadata.image;
+const socialSize = 'attributes' in socialImage ? socialImage.attributes : socialImage;
 const image = absolute(socialImage.src);
 const imageAlt = post?.data.featured_image.alt || metadata.imageAlt;
 
@@ -62,8 +65,8 @@ const jsonLd = post && {
 		<meta property="og:description" content={pageDescription}>
 		{!noindex && <meta property="og:url" content={pageUrl}>}
 		<meta property="og:site_name" content="Home of the Marabyte">
-		<meta property="og:image:width" content={socialImage.width}>
-		<meta property="og:image:height" content={socialImage.height}>
+		<meta property="og:image:width" content={socialSize.width}>
+		<meta property="og:image:height" content={socialSize.height}>
 		<meta property="og:image:alt" content={imageAlt}>
 		<meta name="description" content={pageDescription}>
 		{jsonLd && <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}

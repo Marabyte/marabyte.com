@@ -17,6 +17,10 @@ export default defineConfig({
 		// The 11ty site inlined all CSS into <style> tags.
 		inlineStylesheets: 'always',
 	},
+	image: {
+		// Lets getImage() rasterise the featured SVGs into og:image PNGs. Safe: every SVG here is our own.
+		dangerouslyProcessSVG: true,
+	},
 	markdown: {
 		// Fences without a language stay plain <pre><code> (no theme styling), as before.
 		syntaxHighlight: { type: 'shiki', excludeLangs: ['plaintext'] },
