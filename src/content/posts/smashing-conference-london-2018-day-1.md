@@ -6,7 +6,6 @@ featured_image:
   alt: 'A geometric representation of a nightime timelapse photo in a city'
   caption: 'Photo by Marc-Olivier Jodoin on Unsplash'
   src: ../../assets/uploads/speed.svg
-  social: ../../assets/uploads/speed.svg.png
 summary: My notes for day one of Smashing Conference London 2018
 tags: []
 

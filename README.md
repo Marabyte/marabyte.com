@@ -13,7 +13,7 @@ npm run preview   # build, then serve ./dist with wrangler (same routing/redirec
 
 ## Content
 
-Posts live in `src/content/posts/*.md`. The `slug` frontmatter field sets the URL (`/post/<slug>/`). Featured images go in `src/assets/uploads/`, and the optional `featured_image.social` PNG goes in `public/uploads/`.
+Posts live in `src/content/posts/*.md`. The `slug` frontmatter field sets the URL (`/post/<slug>/`). Featured images go in `src/assets/uploads/`. The og:image PNG for each post is generated from its featured image at build time.
 
 ## Deploy
 

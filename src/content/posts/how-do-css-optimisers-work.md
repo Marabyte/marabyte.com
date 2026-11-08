@@ -6,7 +6,6 @@ featured_image:
   alt: A vector geometric representation of a man throwing a fishing net
   caption: A geometrized version of a photo by Lahiru Iddamalgoda on Unsplash
   src: ../../assets/uploads/moutain-daniel-sessler-unsplash.svg
-  social: ../../assets/uploads/moutain-daniel-sessler-unsplash.svg.png
 summary: What's the magic behind CSS optimisers?
 tags:
   - 11ty
