@@ -33,7 +33,13 @@ const { title, date, summary, featured_image } = post.data;
 <style is:global>
 /* Global because it styles the rendered Markdown inside <slot />. */
 .article {
-	section * {
+	/*
+	 * Space after each block of the post, and after the blocks inside quotes and figures
+	 * (the -1em on video captions below relies on it). Images can sit inside a paragraph.
+	 */
+	section > *,
+	section :where(blockquote, figure) > *,
+	section img {
 		margin-bottom: calc(1em + 0.5vw);
 	}
 
@@ -71,9 +77,9 @@ const { title, date, summary, featured_image } = post.data;
 
 	blockquote {
 		font-size: 1rem;
-		padding-left: 1em;
+		padding-inline-start: 1em;
 		font-style: italic;
-		border-left: 2px solid var(--accent-color);
+		border-inline-start: 2px solid var(--accent-color);
 	}
 
 	iframe ~ figcaption {
@@ -83,8 +89,8 @@ const { title, date, summary, featured_image } = post.data;
 	}
 
 	:not(pre) > code {
-		background: #2d2d2d;
-		color: #f8c555;
+		background: var(--code-background-color);
+		color: var(--code-color);
 		padding: 2px 4px;
 	}
 
@@ -93,8 +99,19 @@ const { title, date, summary, featured_image } = post.data;
 		padding: 1em;
 	}
 
+	/*
+	 * Tailwind's preflight sets `list-style: none` on lists, so the type goes back on the list
+	 * itself (an `li { list-style: inside }` shorthand would also turn numbered lists into bullets).
+	 */
+	ul {
+		list-style: disc inside;
+	}
+
+	ol {
+		list-style: decimal inside;
+	}
+
 	li {
-		list-style: inside;
 		margin-bottom: 0.5rem;
 	}
 
@@ -104,8 +121,22 @@ const { title, date, summary, featured_image } = post.data;
 		padding: 1px;
 	}
 
+	/* Wide tables scroll inside their own box (see the post's markup) instead of the page. */
+	.table-scroll {
+		overflow-x: auto;
+	}
+
 	table {
 		width: 100%;
+		caption {
+			caption-side: bottom;
+			font-size: 1rem;
+			padding-top: 0.5em;
+		}
+		th,
+		td {
+			text-align: center;
+		}
 		thead,
 		tr:not(:last-child) {
 			border-bottom: 2px solid var(--accent-color);

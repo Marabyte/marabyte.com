@@ -103,9 +103,17 @@ color=y,in=w,px=z,10=q
 
 Let's just agreed this is a terrible compression algorithm. Luckly browsers use much better ones like [gzip](https://www.gnu.org/software/gzip/) and [brotli](https://github.com/google/brotli), how much better? Look at TailwindCSS own results:
 
-| Uncompressed | Minified |  Gzip   | Brotli |
-| :----------: | :------: | :-----: | :----: |
-|   2413.4kB   | 1967.4kB | 190.2kB | 46.2kB |
+<div class="table-scroll" role="region" aria-labelledby="tailwind-sizes" tabindex="0">
+<table>
+<caption id="tailwind-sizes">TailwindCSS file size at each step</caption>
+<thead>
+<tr><th scope="col">Uncompressed</th><th scope="col">Minified</th><th scope="col">Gzip</th><th scope="col">Brotli</th></tr>
+</thead>
+<tbody>
+<tr><td>2413.4kB</td><td>1967.4kB</td><td>190.2kB</td><td>46.2kB</td></tr>
+</tbody>
+</table>
+</div>
 
 We knew that minification would saves us a few hundred kilobytes but compression... That's a whole new level.
 
