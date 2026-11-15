@@ -1,0 +1,23 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": ["config:best-practices"],
+	"packageRules": [
+		{
+			"description": "Automerge non-major updates, except 0.x deps where minors can break",
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+			"matchCurrentVersion": "!/^0/",
+			"automerge": true
+		},
+		{
+			"description": "Lock file maintenance has no current version, so it needs its own rule",
+			"matchUpdateTypes": ["lockFileMaintenance"],
+			"automerge": true
+		},
+		{
+			"description": "wrangler releases almost daily; batch it into one weekly PR",
+			"matchPackageNames": ["wrangler"],
+			"groupName": "wrangler",
+			"schedule": ["before 9am on monday"]
+		}
+	]
+}
