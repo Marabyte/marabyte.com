@@ -37,8 +37,16 @@ const { title, date, summary, featured_image } = post.data;
 		margin-bottom: calc(1em + 0.5vw);
 	}
 
-	a:hover {
-		text-decoration: underline;
+	/*
+	 * Underlined, not just coloured: the link colour is only ~2:1 against the body text,
+	 * below the 3:1 that WCAG 1.4.1 needs for colour alone to mark a link.
+	 */
+	a {
+		text-decoration-line: underline;
+		text-underline-offset: 0.2em;
+		&:hover {
+			text-decoration-thickness: 2px;
+		}
 	}
 
 	h2 {
@@ -52,6 +60,8 @@ const { title, date, summary, featured_image } = post.data;
 
 	h3 {
 		font-size: 1.25rem;
+		/* Bold makes 20px "large text", so the accent colour's 3.4:1 passes (normal weight needs 4.5:1). */
+		font-weight: bold;
 		margin-top: 2.5em;
 	}
 
