@@ -33,7 +33,8 @@
 body {
 	background-color: var(--primary-color);
 	color: var(--base-color);
-	font-size: 18px;
+	/* 18px at the default size, but in rem so it follows the reader's browser font-size setting. */
+	font-size: 1.125rem;
 }
 
 h1,
