@@ -12,7 +12,8 @@ const { post, index } = Astro.props;
 const isFirst = index === 1;
 ---
 
-<article class:list={['postcard relative flex flex-col aspect-square p-8', isFirst && 'sm:col-span-2 sm:aspect-[2/1]']}>
+{/* An item of PostGrid's list. */}
+<li class:list={['postcard relative flex flex-col aspect-square p-8', isFirst && 'sm:col-span-2 sm:aspect-[2/1]']}>
 	{/* Decorative: the card's name comes from the title. object-left-top keeps the old background-image crop. */}
 	<Image
 		class="absolute inset-0 size-full object-cover object-left-top"
@@ -23,4 +24,4 @@ const isFirst = index === 1;
 	<a class="relative flex flex-1 flex-col justify-center" href={postUrl(post)}>
 		<h2 class="font-bold sm:text-3xl text-2xl mt-auto antialiased">{post.data.title}</h2>
 	</a>
-</article>
+</li>

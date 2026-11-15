@@ -26,35 +26,39 @@
 	--base-color: #ffffff;
 	--links-color: #41c7c7;
 	--primary-color: #222429;
+	--code-background-color: #2d2d2d;
+	--code-color: #f8c555;
 	/* The site only has a dark theme: dark scrollbars and form controls, no white flash. Must be on :root. */
 	color-scheme: dark;
 }
 
-body {
-	background-color: var(--primary-color);
-	color: var(--base-color);
-	/* 18px at the default size, but in rem so it follows the reader's browser font-size setting. */
-	font-size: 1.125rem;
-}
+/*
+ * In Tailwind's base layer, after its preflight, so utility classes can still override these.
+ * Unlayered, they'd beat every utility on <body>, headings and links.
+ */
+@layer base {
+	body {
+		background-color: var(--primary-color);
+		color: var(--base-color);
+		/* 18px at the default size, but in rem so it follows the reader's browser font-size setting. */
+		font-size: 1.125rem;
+	}
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	font-family: Fira, ui-monospace, monospace;
-	/*
-	 * Fira Mono's x-height (527/1000 units), so the fallback is scaled to match while Fira loads
-	 * and the text doesn't jump on swap. Not `from-font`: that reads the fallback until Fira arrives.
-	 */
-	font-size-adjust: 0.527;
-	color: var(--accent-color);
-}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		font-family: Fira, ui-monospace, monospace;
+		/*
+		 * Fira Mono's x-height (527/1000 units), so the fallback is scaled to match while Fira loads
+		 * and the text doesn't jump on swap. Not `from-font`: that reads the fallback until Fira arrives.
+		 */
+		font-size-adjust: 0.527;
+		color: var(--accent-color);
+	}
 
-a,
-a:active,
-a:focus,
-a:link,
-a:visited {
-	color: var(--links-color);
+	a {
+		color: var(--links-color);
+	}
 }

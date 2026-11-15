@@ -4,6 +4,7 @@ import { satteri } from '@astrojs/markdown-satteri';
 import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import { externalLinks } from './src/lib/satteri-external-links.ts';
+import { codeRegions } from './src/lib/shiki-code-regions.ts';
 
 export const SITE = 'https://www.marabyte.com';
 
@@ -24,6 +25,7 @@ export default defineConfig({
 	markdown: {
 		// Fences without a language stay plain <pre><code> (no theme styling), as before.
 		syntaxHighlight: { type: 'shiki', excludeLangs: ['plaintext'] },
+		shikiConfig: { transformers: [codeRegions()] },
 		processor: satteri({
 			hastPlugins: [externalLinks({ siteHost: new URL(SITE).host })],
 			// markdown-it ran with typographer off: keep straight quotes/dashes as written.
