@@ -29,7 +29,7 @@
 	"homepage": "https://github.com/Marabyte/marabyte.com#readme",
 	"devDependencies": {
 		"@biomejs/biome": "2.6.8",
-		"wrangler": "4.161.0"
+		"wrangler": "4.165.0"
 	},
 	"dependencies": {
 		"@astrojs/markdown-satteri": "^0.4.7",
