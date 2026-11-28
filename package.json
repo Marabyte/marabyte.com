@@ -28,7 +28,7 @@
 	},
 	"homepage": "https://github.com/Marabyte/marabyte.com#readme",
 	"devDependencies": {
-		"@biomejs/biome": "2.6.8",
+		"@biomejs/biome": "2.6.9",
 		"wrangler": "4.165.0"
 	},
 	"dependencies": {
